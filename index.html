@@ -1,104 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    p.maquina {
-        width: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        font-family: 'Courier New', Courier, monospace;
-        border-right: .15em solid #188DeC;
-        margin: 0 5%;
-    }
 
-    .boton {
-        background-color: #0DA2AC;
-        position: relative;
-        margin: auto;
-        display: flex;
-        text-decoration: none;
-        overflow: hidden;
-        transition: 2s;
-    }
-
-    .boton:hover {
-        background: #13CAD6;
-        box-shadow: 0 0 10px #13CAD6, 0 0 40px #13CAD6, 0 0 80px #13CAD6;
-        transition-delay: 0.05s;
-    }
-
-    .contacto {
-        font-family: 'Flowers';
-        font-size:25px;
-        color: #faff80;
-        width: 90%;
-        margin: auto
-    }
-
-    #divlineatiempo {
-        overflow: hidden;
-    }
-
-    #lineatiempo {
-        transition: 0.5s;
-        object-fit: cover;
-    }
-
-    #lineatiempo:hover {
-        transform: scale(1.5)
-    }
-
-    #presentacion {
-        padding: 5% 7% 0% 5%;
-        text-align: justify;
-        color: #525050
-    }
-
-    div.lenguajes {
-        display: none;
-        text-align: justify;
-        border-radius: 20px;
-        border: 2px solid #0DA2AC;
-        background-color: #d3f5ed;
-        margin: 5px;
-        padding: 10px;
-    }
-
-    @font-face {
-        font-family: 'Flowers';
-        src: url('font/Brain\ Flower.ttf') format('truetype')
-    }
-
-    @keyframes blink {
-        50% {
-            border-color: transparent;
-        }
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 100%;
-        }
-
-    }
-</style>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;1,300&display=swap"
-        rel="stylesheet">
+    <title>CV BelénGC</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="timeline/css/timeline.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -168,7 +80,37 @@
                     </th>
                 </tr>
             </table>
+            <div id='panelJuegos' class="panelJuegos" style="display: none">
+                <div style="display:flex">
+                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                        <button id='botonsopaletras' class="btn btn-secondary btn-block juego">
+                            <h1 class="tjuego">Sopa de Letras.</h1>
+                            11 plabras relacionadas con el desarrollo web, a medida que las descubras te contaré mi
+                            experiencia con ellas.
+                        </button>
+                    </div>
+                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                        <button class="btn btn-secondary btn-block juego" style="height: 100%;">
+                            <h1 class="tjuego">Mémori</h1>
+                            Descubre tarjetas iguales y te ire mostrando mis aptitudes personales.
+                        </button>
+                    </div>
+                </div>
+                <div style="display:flex">
+                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                        <button class="btn btn-secondary btn-block juego">
+                            <h1 class="tjuego">En elaboración</h1>
+                        </button>
+                    </div>
+                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                        <button class="btn btn-secondary btn-block juego">
+                            <h1 class="tjuego">En elaboración</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <div id='container' class="container" style="display: none; padding-top: 20px;">
+
                 <div class="box-cell box1" style="width: 50%; margin: auto; color:#0DA2AC; ">
                     <div style="text-align: justify; margin:20px">En esta sopa de letras hay ocultas 11 palabras
                         relacionadas con el mundo del desarrollo web,
@@ -176,9 +118,15 @@
                         herramientas,
                         pero si no tiene ganas o tiempo para jugar puede darle a resolvel y se mostrarán todas. </div>
                     <table id="sopaletras" style="user-select: none;" translate="no"></table>
+                    <div style="text-align: center;padding-top:2%;">
+                        <button id="mostrarPalabras" class="btn btn-secondary" style="color:#faff80;width: 45%;">Mostrar
+                            Palabras</button>
+                        <button id="resolver" class="btn btn-secondary"
+                            style="color:#faff80;width: 45%;">Resolver</button>
+                    </div>
                 </div>
 
-                <div class="box-cell box2" style="width: 50%; border-left: 3px solid #0DA2AC;">
+                <div id="sopa" class="box-cell box2" style="width: 50%; border-left: 3px solid #0DA2AC;">
                     <div id="css" class="lenguajes">
                         <b><u>CSS:</u></b> El diseño de una web está ligado a este lenguaje que define sus estilos,
                         por tanto he trabajado este lenguaje de manera transversal en cada página que he diseñado.
@@ -274,7 +222,6 @@
     </footer>
     <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="timeline/js/timeline.min.js"></script>
 
     <script>
         var tabla = document.getElementById('sopaletras');
@@ -301,27 +248,49 @@
         var solucion = ""
         //variable para parar la seleccion de celdas
         var continuar = false;
+        var mostrar = false
         var cv = document.getElementById('cv');
-        var cvextendido = document.getElementById('cvextendido')
-
+        var cvextendido = document.getElementById('cvextendido');
+        var botonsopaletras = document.getElementById('botonsopaletras');
+ 
         window.addEventListener('load', function () {
             cvextendido.addEventListener('click', jugar);
-            cv.addEventListener('click', curriculum)
-
+            botonsopaletras.addEventListener('click', jugarletras);
 
         });
-        function curriculum() {
-
+       
+        function mostrarPalabras() {
+            console.log('lista')
+            var lista = document.createElement('div')
+            var texto = document.createTextNode("hola")
+            lista.appendChild(texto)
+            document.getElementById('container').appendChild(lista)
         }
+
         function jugar() {
             console.log('entra')
+            if (!mostrar) {
+                document.getElementById('panelJuegos').style.display = 'block';
+                document.getElementById('presentacion').style.display = 'none';
+                mostrar = true;
+            } else {
+                document.getElementById('panelJuegos').style.display = 'none';
+                document.getElementById('presentacion').style.display = 'block';
+                mostrar = false;
+            }
+
+
+
+        }
+        function jugarletras() {
             document.getElementById('container').style.display = 'flex';
             montartablero();
+            document.location.href = "#sopa";
         }
 
         function montartablero() {
             /*tabla.style.background = '#d3f5ed';*/
-            tabla.style.margin = '20px';
+            tabla.style.margin = 'auto';
             for (i = 0; i < letras.length; i++) {
                 var fila = document.createElement('tr');
                 var fil = 'fil_' + i;
