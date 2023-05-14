@@ -1,107 +1,141 @@
+body {
+    font-family: 'Nunito';
+}
 
-    body{
-        font-family: 'Nunito';
+p.maquina {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Courier New', Courier, monospace;
+    border-right: .15em solid #188DeC;
+    margin: 0 5%;
+}
+/*div.reloj {
+    background: #16A085;
+    background: -webkit-linear-gradient(to right, #faff80, #0DA2AC);
+    background: linear-gradient(to right, #faff80, #0DA2AC);
+
+}*/
+
+.boton {
+    background-color: #0DA2AC;
+    position: relative;
+    margin: auto;
+    display: flex;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.boton:hover {
+    background: #13CAD6;
+    box-shadow: 0 0 10px #13CAD6, 0 0 40px #13CAD6, 0 0 80px #13CAD6;
+    transition-delay: 0.05s;
+}
+
+.contacto {
+    font-family: 'Flowers';
+    font-size: 25px;
+    color: #faff80;
+    width: 90%;
+    margin: auto
+}
+
+#divlineatiempo {
+    overflow: hidden;
+}
+
+#lineatiempo {
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+#lineatiempo:hover {
+    transform: scale(1.5)
+}
+
+#presentacion {
+    padding: 5% 7% 0% 5%;
+    text-align: justify;
+    color: #525050
+}
+
+div.panelJuegos {
+    background: #16A085;
+    background: -webkit-linear-gradient(to right, #faff80, #0DA2AC);
+    background: linear-gradient(to right, #faff80, #0DA2AC);
+    /*background-color: #0DA2AC;*/
+    margin: 5% 15% 5% 5%;
+    padding: 2%;
+    border-radius: 5px;
+    border-top: 5px dashed #faff80;
+    border-bottom: 5px dashed #faff80;
+}
+
+.juego {
+    color: #faff80;
+    padding: 5% 5%;
+}
+
+.tjuego {
+    font-family: 'Flowers';
+    font-size: h1;
+}
+
+div.lenguajes {
+    display: none;
+    text-align: justify;
+    border-radius: 20px;
+    border: 2px solid #0DA2AC;
+    background-color: #d3f5ed;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+div.reloj {
+    margin-top:20px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+div.despedida {
+    position: absolute;
+    top:15%;
+    bottom:50%;
+    left: 10%;
+    right: 10%;
+    line-height: 300%
+}
+
+@font-face {
+    font-family: 'Flowers';
+    src: url(font/Brain\ Flower.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(font/NunitoRegular-vmABZ.ttf);
+}
+
+@font-face {
+    font-family: 'Tiza';
+    src: url(font/Prescious\ Soul.ttf);
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
     }
+}
 
-    p.maquina {
+@keyframes typing {
+    from {
         width: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        font-family: 'Courier New', Courier, monospace;
-        border-right: .15em solid #188DeC;
-        margin: 0 5%;
     }
 
-    .boton {
-        background-color: #0DA2AC;
-        position: relative;
-        margin: auto;
-        display: flex;
-        text-decoration: none;
-        overflow: hidden;
-        transition: 2s;
+    to {
+        width: 100%;
     }
 
-    .boton:hover {
-        background: #13CAD6;
-        box-shadow: 0 0 10px #13CAD6, 0 0 40px #13CAD6, 0 0 80px #13CAD6;
-        transition-delay: 0.05s;
-    }
-
-    .contacto {
-        font-family: 'Flowers';
-        font-size:25px;
-        color: #faff80;
-        width: 90%;
-        margin: auto
-    }
-
-    #divlineatiempo {
-        overflow: hidden;
-    }
-
-    #lineatiempo {
-        transition: 0.5s;
-        object-fit: cover;
-    }
-
-    #lineatiempo:hover {
-        transform: scale(1.5)
-    }
-
-    #presentacion {
-        padding: 5% 7% 0% 5%;
-        text-align: justify;
-        color: #525050
-    }
-    div.panelJuegos{
-        background-color: #0DA2AC;
-        margin:5%;
-        padding: 2%;
-        border-radius: 5px;
-        border:5px dashed #faff80;
-    }
-    .juego{
-        color:#faff80;
-        padding:5% 5%;
-    }
-    .tjuego{
-        font-family: 'Flowers';
-        font-size: h1;
-    }
-
-    div.lenguajes {
-        display: none;
-        text-align: justify;
-        border-radius: 20px;
-        border: 2px solid #0DA2AC;
-        background-color: #d3f5ed;
-        margin: 5px;
-        padding: 10px;
-    }
-
-    @font-face {
-        font-family: 'Flowers';
-        src: url(font/Brain\ Flower.ttf) format('truetype')
-    }
-    @font-face {
-        font-family: 'Nunito';
-        src: url(font/NunitoRegular-vmABZ.ttf);
-    }
-
-    @keyframes blink {
-        50% {
-            border-color: transparent;
-        }
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 100%;
-        }
-
-    }
+}

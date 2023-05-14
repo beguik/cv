@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <title>CV BelénGC</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -65,8 +66,8 @@
                     </th>
                     <th>
                         <a href="#" style="text-decoration: none;">
-                            <div id='cvextendido' class="boton" style="width:80%; height: 200px; margin-top: 10%;">
-                                <div style="color:#faff80; ">
+                            <div id='cvextendido' class="boton" style="width:80%; height: 200px; margin-top: 10%; ">
+                                <div style="color:#faff80; margin: 20px; ">
                                     <h1 style="text-align: center; margin-top: 10%;font-family: Flowers;"><b> Hemos
                                             venido a
                                             jugar!</b></h1>
@@ -80,7 +81,7 @@
                     </th>
                 </tr>
             </table>
-            <div id='panelJuegos' class="panelJuegos" style="display: none">
+            <div id='panelJuegos' class="panelJuegos" style="display: none; ">
                 <div style="display:flex">
                     <div style="width: 50%;  text-align: center; padding: 5%;">
                         <button id='botonsopaletras' class="btn btn-secondary btn-block juego">
@@ -109,94 +110,109 @@
                     </div>
                 </div>
             </div>
-            <div id='container' class="container" style="display: none; padding-top: 20px;">
+            <div id='container' class="container" style="display: none;">
 
-                <div class="box-cell box1" style="width: 50%; margin: auto; color:#0DA2AC; ">
-                    <div style="text-align: justify; margin:20px">En esta sopa de letras hay ocultas 11 palabras
-                        relacionadas con el mundo del desarrollo web,
-                        cuando seleccione una de ellas aparecerá en la derecha la experiencia que tengo con estas
-                        herramientas,
-                        pero si no tiene ganas o tiempo para jugar puede darle a resolvel y se mostrarán todas. </div>
-                    <table id="sopaletras" style="user-select: none;" translate="no"></table>
-                    <div style="text-align: center;padding-top:2%;">
-                        <button id="mostrarPalabras" class="btn btn-secondary" style="color:#faff80;width: 45%;">Mostrar
-                            Palabras</button>
-                        <button id="resolver" class="btn btn-secondary"
-                            style="color:#faff80;width: 45%;">Resolver</button>
-                    </div>
+                <div class="box-cell box1"
+                    style="width: 70%; margin: auto; color:#0DA2AC; display:block;text-align: justify; padding-bottom: 5%;">
+                    En esta sopa de letras hay ocultas 11 palabras
+                    relacionadas con el mundo del desarrollo web,
+                    cuando seleccione una de ellas aparecerá en la derecha la experiencia que tengo con estas
+                    herramientas,
+                    pero si no tiene ganas o tiempo para jugar puede darle a resolvel y se mostrarán todas.
                 </div>
+                <div style="display:flex">
+                    <div>
+                        <table id="sopaletras" style="user-select: none; width:95%" translate="no"></table>
+                        <div style="text-align: center;padding-top:2%;">
+                            <button id="resolver" class="btn btn-secondary"
+                                style="color:#faff80;width: 45%;">Resolver</button>
+                        </div>
+                    </div>
+                    <div id="sopa" class="box-cell box2" style="width:40%; border-left: 3px solid #0DA2AC;">
+                        <div id="css" class="lenguajes">
+                            <b><u>CSS:</u></b> El diseño de una web está ligado a este lenguaje que define sus estilos,
+                            por tanto he trabajado este lenguaje de manera transversal en cada página que he diseñado.
+                            He trabajado también con framework como <b>Bootstrap</b> o <b>Foundation</b>.
+                        </div>
+                        <div id="html" class="lenguajes">
+                            <b><u>HTML:</u></b> Ni que decir que HTML es un lenguaje básico
+                            para el desarrollo web y
+                            que por tanto lo he ido trabajando en cada página que he realizado, incluyendo los nuevos
+                            estandares de <b>HTML5</b>.
+                        </div>
+                        <div id="js" class="lenguajes">
+                            <b><u>JavaScript:</u></b> Esta misma página está construida con
+                            elementos JS que la hacen interactiva.
+                            Personalmente me gusta mucho este lenguaje que permite realizar proyectos muy atractivos
+                            visualmente y que facilitan la interacción con el usuario.
+                            Además de los elementos que trabajo en esta web con javaScript he trabajado también la
+                            validación de campos en el cliente y peticiones <b>Ajax</b> al servidor.
+                        </div>
+                        <div id="jquery" class="lenguajes">
+                            <b><u>JQuery:</u></b> En algunas ocasiones el trabajo con Jquery facilita la interación con
+                            el
+                            DOM y por eso
+                            en algunos proyectos he preferido trabajar algunas partes con esta tecnología.
 
-                <div id="sopa" class="box-cell box2" style="width: 50%; border-left: 3px solid #0DA2AC;">
-                    <div id="css" class="lenguajes">
-                        <b><u>CSS:</u></b> El diseño de una web está ligado a este lenguaje que define sus estilos,
-                        por tanto he trabajado este lenguaje de manera transversal en cada página que he diseñado.
-                        He trabajado también con framework como <b>Bootstrap</b> o <b>Foundation</b>.
-                    </div>
-                    <div id="html" class="lenguajes">
-                        <b><u>HTML:</u></b> Ni que decir que HTML es un lenguaje básico
-                        para el desarrollo web y
-                        que por tanto lo he ido trabajando en cada página que he realizado, incluyendo los nuevos
-                        estandares de <b>HTML5</b>.
-                    </div>
-                    <div id="js" class="lenguajes">
-                        <b><u>JavaScript:</u></b> Esta misma página está construida con
-                        elementos JS que la hacen interactiva.
-                        Personalmente me gusta mucho este lenguaje que permite realizar proyectos muy atractivos
-                        visualmente y que facilitan la interacción con el usuario.
-                        Además de los elementos que trabajo en esta web con javaScript he trabajado también la
-                        validación de campos en el cliente y peticiones <b>Ajax</b> al servidor.
-                    </div>
-                    <div id="jquery" class="lenguajes">
-                        <b><u>JQuery:</u></b> En algunas ocasiones el trabajo con Jquery facilita la interación con el
-                        DOM y por eso
-                        en algunos proyectos he preferido trabajar algunas partes con esta tecnología.
-
-                    </div>
-                    <div id="java" class="lenguajes">
-                        <b><u>Java:</u></b> Mi primera aproximación al mundo de la programación fue con este lenguaje de
-                        programación y he de decir
-                        que no fue un comienzo fácil, pero una vez interiorizados los conceptos básicos la curva de
-                        aprendizaje creció exponencialmente.
-                        He trabajado con java la creación de aplicaciones, de sockets, conexión a base de datos y el
-                        diseño de interfaz gráfica con Java Swing.
-                    </div>
-                    <div id="php" class="lenguajes">
-                        <b><u>PHP:</u></b> Con php he trabajado creando aplicaciones del lado del servido, la validacion
-                        de objetos y el acceso a base de datos.
-                        He trabajado con php puro y también aprendí a manejarme en el framework de <b>Laravel</b>.
-                    </div>
-                    <div id="python" class="lenguajes">
-                        <b><u>Python:</u></b>Este lenguje de programación lo aprendí de forma totalmente autodidacta,
-                        cuando supe que en la empresa, Tangrambpm, donde iba a realizar las prácticas del grado
-                        trabajaba exclusivamente con este lenguaje que no se impartía en el ciclo
-                        decidí realizar el proyecto fin de ciclo, consistente en un portal inmobiliario, en python para
-                        ir adquiriendo soltura.
-                        Posteriormente, las prácticas y el posterior trabajo realizado en esta empresa
-                        ha sido desarrollado integramente en python con el framework de <b>Django</b>.
-                    </div>
-                    <div id="git" class="lenguajes">
-                        <b><u>GIT:</u></b> El control de versiones es una herramienta fundamental para el desarrollo en
-                        equipo, en el último trabajo realizado
-                        trabajamos tanto con <b>Mercurial</b> como con <b>Git</b>
-                    </div>
-                    <div id="sql" class="lenguajes">
-                        <b><u>SQL:</u></b> Las consultas a base de datos las he trabajado con <b>mySQL</b> y
-                        <b>postgreSQL</b>.
-                    </div>
-                    <div id="wordpress" class="lenguajes">
-                        <b><u>Wordpress:</u></b> Antes de dedicarme al desarrollo Web he trabajado como autónoma
-                        y he desarrollado varias web en wordpress con <b>Elementor</b> y <b>Woocomerce</b>.
-                        También en casos puntuales he trabajado con <b>Prestashop</b> en el marco de un marketplace.
-                    </div>
-                    <div id="redessociales" class="lenguajes">
-                        <b><u>Redes Sociales:</u></b> He trabajado también las redes sociales y la imagen de la empresa
-                        Clau Complementos,
-                        atendiendo a las necesiades de la misma.
+                        </div>
+                        <div id="java" class="lenguajes">
+                            <b><u>Java:</u></b> Mi primera aproximación al mundo de la programación fue con este
+                            lenguaje de
+                            programación y he de decir
+                            que no fue un comienzo fácil, pero una vez interiorizados los conceptos básicos la curva de
+                            aprendizaje creció exponencialmente.
+                            He trabajado con java la creación de aplicaciones, de sockets, conexión a base de datos y el
+                            diseño de interfaz gráfica con Java Swing.
+                        </div>
+                        <div id="php" class="lenguajes">
+                            <b><u>PHP:</u></b> Con php he trabajado creando aplicaciones del lado del servido, la
+                            validacion
+                            de objetos y el acceso a base de datos.
+                            He trabajado con php puro y también aprendí a manejarme en el framework de <b>Laravel</b>.
+                        </div>
+                        <div id="python" class="lenguajes">
+                            <b><u>Python:</u></b>Este lenguje de programación lo aprendí de forma totalmente
+                            autodidacta,
+                            cuando supe que en la empresa, Tangrambpm, donde iba a realizar las prácticas del grado
+                            trabajaba exclusivamente con este lenguaje que no se impartía en el ciclo
+                            decidí realizar el proyecto fin de ciclo, consistente en un portal inmobiliario, en python
+                            para
+                            ir adquiriendo soltura.
+                            Posteriormente, las prácticas y el posterior trabajo realizado en esta empresa
+                            ha sido desarrollado integramente en python con el framework de <b>Django</b>.
+                        </div>
+                        <div id="git" class="lenguajes">
+                            <b><u>GIT:</u></b> El control de versiones es una herramienta fundamental para el desarrollo
+                            en
+                            equipo, en el último trabajo realizado
+                            trabajamos tanto con <b>Mercurial</b> como con <b>Git</b>
+                        </div>
+                        <div id="sql" class="lenguajes">
+                            <b><u>SQL:</u></b> Las consultas a base de datos las he trabajado con <b>mySQL</b> y
+                            <b>postgreSQL</b>.
+                        </div>
+                        <div id="wordpress" class="lenguajes">
+                            <b><u>Wordpress:</u></b> Antes de dedicarme al desarrollo Web he trabajado como autónoma
+                            y he desarrollado varias web en wordpress con <b>Elementor</b> y <b>Woocomerce</b>.
+                            También en casos puntuales he trabajado con <b>Prestashop</b> en el marco de un marketplace.
+                        </div>
+                        <div id="redessociales" class="lenguajes">
+                            <b><u>Redes Sociales:</u></b> He trabajado también las redes sociales y la imagen de la
+                            empresa
+                            Clau Complementos,
+                            atendiendo a las necesiades de la misma.
+                        </div>
                     </div>
                 </div>
             </div>
+            <div id="reloj" class="reloj">
+                <img src="img/59adb20e-8f9f-46e8-8a07-e0feb3092b69.jpg" width="100%">
+                <div id='despedida' class="despedida"></div>
 
+
+            </div>
         </div>
+
     </div>
 
 
@@ -252,14 +268,62 @@
         var cv = document.getElementById('cv');
         var cvextendido = document.getElementById('cvextendido');
         var botonsopaletras = document.getElementById('botonsopaletras');
- 
+        var resolver = document.getElementById('resolver');
+
+
         window.addEventListener('load', function () {
             cvextendido.addEventListener('click', jugar);
             botonsopaletras.addEventListener('click', jugarletras);
+            resolver.addEventListener('click', resolverjuego);
+            console.log(mostrar)
+            reloj();
+
 
         });
-       
-        function mostrarPalabras() {
+        function reloj() {
+            let date = new Date();
+            switch (date.getDay()) {
+                case 11:
+                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es el último día de la semana, disfrútalo <br/>¡Feliz Domingo!';
+                    break;
+                case 1:
+                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es Lunes, la primera oportunidad <br/>que te brinda la semana para ser feliz';
+                    break;
+                case 2:
+                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> El martes es el día idal para terminar <br> todo lo que no hiciste el lunes';
+                    break;
+                case 3:
+                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> ¡Ya es miércoles!, la semana pasa más rápido de lo que piesnas, disfrútala!!';
+                    break;
+                case 4:
+                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Haz que este jueves brille <br/>gracias a tu sonrisa';
+                    break;
+                case 5:
+                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy no podía haber amanecido mejor.... ¡es viernes!, asi que a disfrutarlo';
+                    break;
+                case 0:
+                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es sábado, y el día debería de de tener al menos 48 horas para disfrutarlas';
+                    break;
+            }
+            document.getElementById('despedida').style.fontFamily = "Tiza";
+            document.getElementById('despedida').style.fontSize = "xx-Large";
+            document.getElementById('despedida').style.color = "#faff80";
+
+
+
+
+
+        }
+        function resolverjuego() {
+            console.log('resolver')
+            for (i = 0; i < palabras.length; i++) {
+                console.log(palabras[i])
+                document.getElementById(palabras[i]).style.display = 'block'
+
+            }
+
+        }
+        function resolverpalabras() {
             console.log('lista')
             var lista = document.createElement('div')
             var texto = document.createTextNode("hola")
@@ -272,10 +336,13 @@
             if (!mostrar) {
                 document.getElementById('panelJuegos').style.display = 'block';
                 document.getElementById('presentacion').style.display = 'none';
+                document.getElementById('reloj').style.display = 'none';
+
                 mostrar = true;
             } else {
                 document.getElementById('panelJuegos').style.display = 'none';
                 document.getElementById('presentacion').style.display = 'block';
+                document.getElementById('reloj').style.display = 'block';
                 mostrar = false;
             }
 
@@ -283,7 +350,7 @@
 
         }
         function jugarletras() {
-            document.getElementById('container').style.display = 'flex';
+            document.getElementById('container').style.display = 'block';
             montartablero();
             document.location.href = "#sopa";
         }
@@ -351,7 +418,10 @@
             for (i = 0; i <= palabras.length; i++) {
                 if (palabras[i] == solucion) {
                     exito = true;
-                    console.log(solucion)
+                    for (i = 0; i < palabras.length; i++) {
+                        console.log(palabras[i])
+                        document.getElementById(palabras[i]).style.display = 'none'
+                    }
                     document.getElementById(solucion).style.display = 'block'
                     for (j = columna; j < (columna + claves.length); j++) {
                         document.getElementById('sopaletras').rows[fila].cells[j].style.backgroundColor = '#d3f5ed'
