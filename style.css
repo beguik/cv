@@ -1,5 +1,26 @@
 body {
     font-family: 'Nunito';
+    padding: 1%;
+    background-color: #faff80
+}
+
+div.content {
+    height: 250px;
+    width: 100%;
+    border-bottom: 2px solid #0DA2AC
+}
+
+#cabecera {
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    margin: auto
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 150px;
+    margin: 10% 0 5% 0
 }
 
 p.maquina {
@@ -9,13 +30,50 @@ p.maquina {
     font-family: 'Courier New', Courier, monospace;
     border-right: .15em solid #188DeC;
     margin: 0 5%;
+    color: #525050;
+    animation: typing 8s steps(35) 1s 1 normal both, blink 0.5s steps(1);
 }
-/*div.reloj {
-    background: #16A085;
-    background: -webkit-linear-gradient(to right, #faff80, #0DA2AC);
-    background: linear-gradient(to right, #faff80, #0DA2AC);
 
-}*/
+#contenedor{
+    display:flex;  
+    margin: auto; 
+    padding-bottom: 5%;
+}
+
+#divlineatiempo{
+    width: 30%;
+    margin-top: 4%;
+    overflow: hidden;
+}
+
+#lineatiempo {
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+#lineatiempo:hover {
+    transform: scale(1.5)
+}
+
+#contenedor1{
+    width:70%;
+}
+
+#presentacion {
+    padding: 5% 7% 0% 5%;
+    text-align: justify;
+    color: #525050
+}
+
+a:link{
+    text-decoration: none;
+}
+
+#cv, #cvextendido{
+    width:80%; 
+    height:200px; 
+    margin-top: 10%;
+}
 
 .boton {
     background-color: #0DA2AC;
@@ -29,8 +87,23 @@ p.maquina {
 
 .boton:hover {
     background: #13CAD6;
-    box-shadow: 0 0 10px #13CAD6, 0 0 40px #13CAD6, 0 0 80px #13CAD6;
+    box-shadow: 0 0 10px #13CAD6, 0 0 20px #13CAD6, 0 0 80px #13CAD6;
     transition-delay: 0.05s;
+}
+
+.botones{
+    color:#faff80; 
+    margin: 20px; 
+}
+
+.titulo{
+    text-align: center; 
+    font-family: Flowers;
+}
+.descripcion{
+    font-size:smaller; 
+    text-align: center; 
+    margin: 5%;
 }
 
 .contacto {
@@ -41,35 +114,36 @@ p.maquina {
     margin: auto
 }
 
-#divlineatiempo {
-    overflow: hidden;
-}
-
-#lineatiempo {
-    transition: 0.5s;
-    object-fit: cover;
-}
-
-#lineatiempo:hover {
-    transform: scale(1.5)
-}
-
-#presentacion {
-    padding: 5% 7% 0% 5%;
-    text-align: justify;
-    color: #525050
-}
-
 div.panelJuegos {
     background: #16A085;
     background: -webkit-linear-gradient(to right, #faff80, #0DA2AC);
     background: linear-gradient(to right, #faff80, #0DA2AC);
-    /*background-color: #0DA2AC;*/
-    margin: 5% 15% 5% 5%;
+    margin: 15% 7% 5% 7%;
     padding: 2%;
     border-radius: 5px;
     border-top: 5px dashed #faff80;
     border-bottom: 5px dashed #faff80;
+}
+.botonjuego{
+    width: 50%;  
+    text-align: center; 
+    padding: 5%;
+}
+
+.container{
+    padding-top:7%;
+    width:80%;
+    margin: auto; 
+}
+.box1{
+    color:#0DA2AC; 
+    display:block;
+    text-align: justify; 
+    padding-bottom: 5%;
+}
+.box2{
+    width:70%; 
+    border-left: 3px solid #0DA2AC;
 }
 
 .juego {
@@ -92,9 +166,13 @@ div.lenguajes {
     padding: 10px;
 }
 
+#volverPanel{
+margin:2%;
+color:#faff80;
+}
 
 div.reloj {
-    margin-top:20px;
+    margin-top: 60px;
     position: relative;
     display: inline-block;
     text-align: center;
@@ -102,11 +180,10 @@ div.reloj {
 
 div.despedida {
     position: absolute;
-    top:15%;
-    bottom:50%;
+    top: 20%;
     left: 10%;
     right: 10%;
-    line-height: 300%
+    line-height: 200%
 }
 
 @font-face {
@@ -123,6 +200,7 @@ div.despedida {
     font-family: 'Tiza';
     src: url(font/Prescious\ Soul.ttf);
 }
+
 @keyframes blink {
     50% {
         border-color: transparent;

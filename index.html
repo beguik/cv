@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <title>CV BelénGC</title>
+    <link rel="icon" type="image/png" href="img/myAvatar.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -15,82 +16,94 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body style="padding: 1%; background-color: #faff80">
+<body>
     <header>
-        <div class="content" style="height: 300px; width: 100%;border-bottom:2px solid rgb(86, 167, 167)">
-            <div style="width:30%; height: 100%; text-align:center; margin:auto">
-                <img src="img/myAvatar.png" style="border-radius: 50%; width: 150px; margin:10% 0 5% 0">
-                <p class="maquina"
-                    style='animation:typing 8s steps(35) 1s 1 normal both, blink 0.5s steps(1);color: #525050'>
+        <div class="content">
+            <div id="cabecera">
+                <img id='avatar' src="img/myAvatar.png">
+                <p class="maquina">
                     <b>Hola soy Belén, y este es mi CV ...</b>
                 </p>
             </div>
         </div>
     </header>
-    <div style="display:flex;  margin: auto; padding-bottom: 5%;">
-        <div id="divlineatiempo" style="width: 30%;">
+
+    <div id="contenedor">
+        <div id="divlineatiempo">
             <a target="_blank" href="img/lineatemp.jpg">
                 <img id="lineatiempo" src="img/lineatemp.jpg" width="100%">
             </a>
-
         </div>
-        <div style="width:70%;">
-            <div id="presentacion">
-                Bienvenido a este espacio donde pretendo presentarme y mostrar mis habilidades
-                personales y profesionales en la medida que el espacio lo permite. <br />
-                Hace algunos años descubrí el mundo del desarrollo web y me gustó tanto que decidi dar un giro a mi
-                formación, a partir de ese momento me he dedicado a aprender, practicar e investigar este mundo que
-                tantas
-                posibilidades de crecimiento profesional tiene.
 
-                <br /> A continuación te propongo que eches un vistazo a mi curriculum y si tienes tiempo te entretengas
-                con
-                algunos de los juegos que he diseñado para que sea más amena la visita a esta página
+        <div id="contenedor1">
+            <div id="presentacion">
+                Hace algunos años descubrí el mundo del desarrollo web y me fascinó,
+                se pueden hacer cosas, muchas cosas!,
+                Lo imagnias, lo creas, lo revisas, lo mejoras....
+                me encanta! hay millones de posibilidades y recursos
+                para crear páginas que ofrezcan, experiencias de usuario satisfactorias,
+                contenidos educativos, productivos.....<br /><br />
+                Cuando descubrí ese universo decidí realizar una formación
+                que me permitiera adquirir los conocimientos de base y
+                las herramientas necesarias para continuar la formación por mi cuenta.
+                Una vez superada esa formación y tras algunos trabajos de desarrollo web,
+                sigo investigando nuevos lenguajes de programación y diseños para que la
+                interfaz sea clara, práctica y fácil de usar.
+                <br /><br />
+                En el lado izquierdo de esta página he situado una línea temporal
+                en la que recojo los aspectos más destacados de mi experiencia educativa y laboral,
+                y debajo de estas líneas tienes dos accesos, por un lado puedes ver un curriculum en pdf de la forma más
+                tradicional o por otro,
+                solo si tienes tiempo y ganas, una batería de juegos donde de forma interactiva te ire mostrando
+                habilidades
+                tanto profesionales como personales y en que momento las he ido desarrollando y poniendo en práctica.
+
             </div>
-            <table style="width: 100%;">
+            <table id="tablacv" style="width: 100%;">
                 <tr style="height: 200px;">
                     <th>
-                        <div id='cv' class="boton" style="width:80%; height:200px; margin-top: 10%;">
-                            <a target="_self" href="img/CvBelénGuijarroCubero.jpg" style="text-decoration: none;">
-                                <div style="color:#faff80; ">
-                                    <h1 style="text-align: center; margin-top: 10%; font-family: Flowers;"><b>Ahora no
-                                            tengo
-                                            tiempo</b></h1>
-                                    <p style="font-size:smaller; text-align: center; margin: 5%;">Si pulsas este botón
-                                        te
-                                        mostraré mi curriculum de forma simplificada, indicando los
-                                        aspectos más relevantes de mi trayectoria laboral</p>
+                        <div id='cv' class="boton">
+                            <a target="_self" href="img/CvBelénGuijarroCubero.jpg">
+                                <div class="botones">
+                                    <h1 class="titulo">
+                                        <b>Ahora no tengo tiempo</b>
+                                    </h1>
+                                    <p class="descripcion">
+                                        Si pulsas este botón te
+                                        mostraré mi curriculum de forma simplificada,
+                                        indicando los aspectos más relevantes de mi trayectoria laboral
+                                    </p>
                                 </div>
                             </a>
                         </div>
                     </th>
                     <th>
-                        <a href="#" style="text-decoration: none;">
-                            <div id='cvextendido' class="boton" style="width:80%; height: 200px; margin-top: 10%; ">
-                                <div style="color:#faff80; margin: 20px; ">
-                                    <h1 style="text-align: center; margin-top: 10%;font-family: Flowers;"><b> Hemos
-                                            venido a
-                                            jugar!</b></h1>
-                                    <p style="font-size:smaller; text-align: center; margin: 5%;">Si pulsas este botón
-                                        te
+                        <a href="#">
+                            <div id='cvextendido' class="boton">
+                                <div class="botones">
+                                    <h1 class="titulo">
+                                        <b> Hemos venido a jugar!</b>
+                                    </h1>
+                                    <p class="descripcion">
+                                        Si pulsas este botón te
                                         mostraré mis habilidades profesionales miestras te entretienes
                                         resolviendo pequeños juegos realizados en html, css y javaScript.</p>
                                 </div>
+                            </div>
                         </a>
-
                     </th>
                 </tr>
             </table>
-            <div id='panelJuegos' class="panelJuegos" style="display: none; ">
+            <div id='panelJuegos' class="panelJuegos" style="display: none;">
                 <div style="display:flex">
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                    <div class="botonjuego">
                         <button id='botonsopaletras' class="btn btn-secondary btn-block juego">
                             <h1 class="tjuego">Sopa de Letras.</h1>
                             11 plabras relacionadas con el desarrollo web, a medida que las descubras te contaré mi
                             experiencia con ellas.
                         </button>
                     </div>
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                    <div class="botonjuego">
                         <button class="btn btn-secondary btn-block juego" style="height: 100%;">
                             <h1 class="tjuego">Mémori</h1>
                             Descubre tarjetas iguales y te ire mostrando mis aptitudes personales.
@@ -98,12 +111,12 @@
                     </div>
                 </div>
                 <div style="display:flex">
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                    <div class="botonjuego">
                         <button class="btn btn-secondary btn-block juego">
                             <h1 class="tjuego">En elaboración</h1>
                         </button>
                     </div>
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
+                    <div class="botonjuego">
                         <button class="btn btn-secondary btn-block juego">
                             <h1 class="tjuego">En elaboración</h1>
                         </button>
@@ -112,23 +125,21 @@
             </div>
             <div id='container' class="container" style="display: none;">
 
-                <div class="box-cell box1"
-                    style="width: 70%; margin: auto; color:#0DA2AC; display:block;text-align: justify; padding-bottom: 5%;">
-                    En esta sopa de letras hay ocultas 11 palabras
-                    relacionadas con el mundo del desarrollo web,
-                    cuando seleccione una de ellas aparecerá en la derecha la experiencia que tengo con estas
-                    herramientas,
-                    pero si no tiene ganas o tiempo para jugar puede darle a resolvel y se mostrarán todas.
+                <div class="box-cell box1">
+                    En esta sopa de letras hay ocultas 11 palabras relacionadas con el mundo del desarrollo web,
+                    cuando seleccione una de ellas aparecerá en la derecha la experiencia que tengo
+                    con el lenguaje o herramienta seleccionado.
+                    Si se da por vencido puede darle a resolver y se mostrarán todas.
                 </div>
                 <div style="display:flex">
-                    <div>
+                    <div id="tablasopaletras">
                         <table id="sopaletras" style="user-select: none; width:95%" translate="no"></table>
                         <div style="text-align: center;padding-top:2%;">
                             <button id="resolver" class="btn btn-secondary"
                                 style="color:#faff80;width: 45%;">Resolver</button>
                         </div>
                     </div>
-                    <div id="sopa" class="box-cell box2" style="width:40%; border-left: 3px solid #0DA2AC;">
+                    <div id="sopa" class="box-cell box2">
                         <div id="css" class="lenguajes">
                             <b><u>CSS:</u></b> El diseño de una web está ligado a este lenguaje que define sus estilos,
                             por tanto he trabajado este lenguaje de manera transversal en cada página que he diseñado.
@@ -140,7 +151,7 @@
                             que por tanto lo he ido trabajando en cada página que he realizado, incluyendo los nuevos
                             estandares de <b>HTML5</b>.
                         </div>
-                        <div id="js" class="lenguajes">
+                        <div id="javascript" class="lenguajes">
                             <b><u>JavaScript:</u></b> Esta misma página está construida con
                             elementos JS que la hacen interactiva.
                             Personalmente me gusta mucho este lenguaje que permite realizar proyectos muy atractivos
@@ -150,10 +161,7 @@
                         </div>
                         <div id="jquery" class="lenguajes">
                             <b><u>JQuery:</u></b> En algunas ocasiones el trabajo con Jquery facilita la interación con
-                            el
-                            DOM y por eso
-                            en algunos proyectos he preferido trabajar algunas partes con esta tecnología.
-
+                            el DOM y por eso en algunos proyectos he preferido trabajar algunas partes con esta tecnología.
                         </div>
                         <div id="java" class="lenguajes">
                             <b><u>Java:</u></b> Mi primera aproximación al mundo de la programación fue con este
@@ -204,12 +212,13 @@
                         </div>
                     </div>
                 </div>
+                <button id="volverPanel" class="btn btn-secondary btn-block">Volver al panel
+                    de juegos</button>
             </div>
+
             <div id="reloj" class="reloj">
-                <img src="img/59adb20e-8f9f-46e8-8a07-e0feb3092b69.jpg" width="100%">
+                <img src="img/59adb20e-8f9f-46e8-8a07-e0feb3092b69.jpg" width="75%">
                 <div id='despedida' class="despedida"></div>
-
-
             </div>
         </div>
 
@@ -240,7 +249,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 
-   
+
 </body>
 
 </html>

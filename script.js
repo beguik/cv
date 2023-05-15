@@ -1,3 +1,4 @@
+var mostrar = false;
 var tabla = document.getElementById('sopaletras');
 var letras = [
     ['i', 'c', 's', 's', 'n', 'g', 'h', 't', 'm', 'l', 'd', 'j', 's', 'r'],
@@ -10,7 +11,7 @@ var letras = [
     ['q', 'j', 'a', 'v', 'a', 'y', 'p', 'h', 'l', 'n', 'q', 'l', 'z', 'r'],
     ['i', 'w', 'k', 'd', 'j', 'a', 's', 'q', 'l', 'f', 'v', 'z', 'r', 'c'],
     ['l', 'j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', 'g', 'a', 'x'],
-    ['h', 'o', 'n', 't', 'j', 'w', 'w', 'o', 'i', 'j', 'a', 'v', 'a', 'o'],
+    ['h', 'o', 'n', 't', 'j', 'w', 'w', 'o', 'i', 'j', 'a', 'm', 'a', 'o'],
     ['e', 'w', 'o', 'r', 'd', 'p', 'r', 'e', 's', 's', 'g', 'e', 'a', 'e'],
     ['r', 'e', 'd', 'e', 's', 's', 'o', 'c', 'i', 'a', 'l', 'e', 's', 'p'],
     ['s', 'z', 's', 'x', 'c', 'r', 'l', 'j', 'c', 'j', 'z', 'g', 'i', 't'],
@@ -19,19 +20,21 @@ var palabras = ['javascript', 'html', 'css', 'jquery', 'php', 'java', 'sql', 'wo
 var claves = []
 var solucion = ""
 var continuar = false;
-var mostrar = false
+var tablero = false;
+
 var cv = document.getElementById('cv');
 var cvextendido = document.getElementById('cvextendido');
 var botonsopaletras = document.getElementById('botonsopaletras');
 var resolver = document.getElementById('resolver');
 
 
+
 window.addEventListener('load', function () {
+    reloj();
     cvextendido.addEventListener('click', jugar);
     botonsopaletras.addEventListener('click', jugarletras);
     resolver.addEventListener('click', resolverjuego);
-    reloj();
-
+    document.getElementById('volverPanel').addEventListener('click', volverPanel);
 
 });
 
@@ -63,77 +66,57 @@ function reloj() {
     document.getElementById('despedida').style.fontFamily = "Tiza";
     document.getElementById('despedida').style.fontSize = "xx-Large";
     document.getElementById('despedida').style.color = "#faff80";
-
-
-
-
-
-}
-function resolverjuego() {
-    console.log('resolver')
-    for (i = 0; i < palabras.length; i++) {
-        console.log(palabras[i])
-        document.getElementById(palabras[i]).style.display = 'block'
-
-    }
-
-}
-function resolverpalabras() {
-    console.log('lista')
-    var lista = document.createElement('div')
-    var texto = document.createTextNode("hola")
-    lista.appendChild(texto)
-    document.getElementById('container').appendChild(lista)
 }
 
 function jugar() {
-    console.log('entra')
     if (!mostrar) {
         document.getElementById('panelJuegos').style.display = 'block';
         document.getElementById('presentacion').style.display = 'none';
         document.getElementById('reloj').style.display = 'none';
-
+        document.getElementById('tablacv').style.marginTop = '10%'
         mostrar = true;
     } else {
         document.getElementById('panelJuegos').style.display = 'none';
         document.getElementById('presentacion').style.display = 'block';
         document.getElementById('reloj').style.display = 'block';
+        document.getElementById('tablacv').style.marginTop = '1%'
         mostrar = false;
     }
-
-
-
 }
+
 function jugarletras() {
     document.getElementById('container').style.display = 'block';
-    montartablero();
+    document.getElementById('panelJuegos').style.display = 'none'
+    mostrar = true;
     document.location.href = "#sopa";
+    montartablero();
 }
 
 function montartablero() {
-    /*tabla.style.background = '#d3f5ed';*/
-    tabla.style.margin = 'auto';
-    for (i = 0; i < letras.length; i++) {
-        var fila = document.createElement('tr');
-        var fil = 'fil_' + i;
-        fila.setAttribute('id', fil);
-        for (x = 0; x < letras[i].length; x++) {
-            var celda = document.createElement('th');
-            var cel = 'cel_' + i + '_' + x;
-            celda.setAttribute('id', cel);
-            celda.setAttribute('onmousedown', 'presiono(this)');
-            celda.setAttribute('onmouseup', 'levanto(this)');
-
-            celda.style.background = '#d3f5ed';
-            celda.style.width = '25px';
-            celda.style.height = '25px';
-            celda.style.color = '#0DA2AC';
-            celda.style.border = '1px solid #0DA2AC';
-            celda.style.textAlign = 'center';
-            celda.innerHTML = letras[i][x];
-            fila.appendChild(celda);
+    if (!tablero) {
+        tabla.style.margin = 'auto';
+        for (i = 0; i < letras.length; i++) {
+            var fila = document.createElement('tr');
+            var fil = 'fil_' + i;
+            fila.setAttribute('id', fil);
+            for (x = 0; x < letras[i].length; x++) {
+                var celda = document.createElement('th');
+                var cel = 'cel_' + i + '_' + x;
+                celda.setAttribute('id', cel);
+                celda.setAttribute('onmousedown', 'presiono(this)');
+                celda.setAttribute('onmouseup', 'levanto(this)');
+                celda.style.background = '#d3f5ed';
+                celda.style.width = '25px';
+                celda.style.height = '25px';
+                celda.style.color = '#0DA2AC';
+                celda.style.border = '1px solid #0DA2AC';
+                celda.style.textAlign = 'center';
+                celda.innerHTML = letras[i][x];
+                fila.appendChild(celda);
+            }
+            tabla.appendChild(fila);
         }
-        tabla.appendChild(fila);
+        tablero=true;
     }
 }
 
@@ -141,18 +124,14 @@ function presiono(objeto) {
     valores = objeto.id.split('_');
     var fila = valores[1];
     var columna = valores[2];
-    //marcamos el comienzo de la palabra
     objeto.style.background = "#0DA2AC";
-    //empezamos a escribir la palabra
     solucion += objeto.innerHTML;
     claves.push(objeto.id)
-    //comenzamos el evento para seleccionar el resto de la palabra que será en la misma fila 
     continuar = true;
     for (e = 1; e <= 14; e++) {
         var capa = "cel_" + Number(fila) + "_" + e;
         crearEvento(document.getElementById(capa), 'mouseover', muevo);
     }
-
 }
 
 function muevo() {
@@ -169,7 +148,6 @@ function levanto(objeto) {
     var valor = claves[0].split('_');
     var fila = Number(valores[1]);
     var columna = Number(valores[2]);
-
     for (i = 0; i <= palabras.length; i++) {
         if (palabras[i] == solucion) {
             exito = true;
@@ -184,26 +162,36 @@ function levanto(objeto) {
             }
         }
     }
-
     if (!exito) {
         for (j = columna; j < (columna + claves.length); j++) {
             document.getElementById('sopaletras').rows[fila].cells[j].style.backgroundColor = '#d3f5ed'
         }
     }
-
     solucion = ''
     claves = []
-} 
+}
 
+function resolverjuego() {
+    for (i = 0; i < palabras.length; i++) {
+        document.getElementById(palabras[i]).style.display = 'block';
+    }
+}
 
-
+function volverPanel() {
+    document.getElementById('container').style.display = 'none';
+    document.getElementById('panelJuegos').style.display = 'block';
+    for (i = 0; i < palabras.length; i++) {
+        console.log(palabras[i])
+        document.getElementById(palabras[i]).style.display = 'none'
+    }
+    mostrar = false;
+}
 
 var crearEvento = function (elemento, evento, mifuncion) {
     function w3c_crearEvento(elemento, evento, mifuncion) {
         if (elemento) {
             elemento.addEventListener(evento, mifuncion, false);
         }
-
     }
     function ie_crearEvento(elemento, evento, mifuncion) {
         var fx = function () {
