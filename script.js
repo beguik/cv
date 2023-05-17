@@ -21,22 +21,127 @@ var claves = []
 var solucion = ""
 var continuar = false;
 var tablero = false;
-
+var tableroMemori = false;
+var habilidades = ['Creatividad', 'Empatía', 'Asertividad', 'Flexibilidad', 'Gestión del Tiempo', 'Curiosidad', 'Planificación', 'Trabajo en Equipo',
+    'Creatividad', 'Empatía', 'Asertividad', 'Flexibilidad', 'Gestión del Tiempo', 'Curiosidad', 'Planificación', 'Trabajo en Equipo'];
+var diccionario = {};
+diccionario['Creatividad'] = "La rueda ya se inventó, no es necesario volverla a inventar, pero se puede adaptar y mejorar a las necesidades de cada momento. Para mi eso es la creatividad, la capacidad de crear un producto nuevo adaptando las ideas, concepto y experiencias que hemos ido recogiendo a lo largo del camino, si bien es cierto que una persona creativa se compone de muchas otras aptitudes que la propia experiencia, algunas quedán recogidas en este pequeño juego."
+diccionario['Empatía'] = "Es importante el desarrollo de esta habilidad para atender a las necesidades de clientes o de posibles clientes y también es importante cuando trabajamos en equipo. Ver el mundo desde la perspectiva de la persona que tenemos en frente nos ayuda a entender sus necesidades. "
+diccionario['Asertividad'] = "Una comunicación asertiva es importante en todo equipo de trabajo, es necesario saber expresar opiniones de forma eficaz."
+diccionario['Flexibilidad'] = "Siempre ocurren hechos puntuales que modifican nuestra hoja de ruta y es necesario saber encajarlos en nuestro ritmo de trabajo; Igualmente siempre hay que estar abierto a una posible opinión que mejore nuestro proceso."
+diccionario['Gestión del Tiempo'] = "Es importante en un trabajo ser consciente del tiempo que dedicamos a cada tarea y como organizarlas de forma que sea lo más rentable posible. "
+diccionario['Curiosidad'] = "La curiosidad me llevó a aprender esta profesión, y una de las cosas que me encanta de ella es, que existen tantos lenguajes y herramientas que siempre hay algo nuevo que aprender."
+diccionario['Planificación'] = "No soy nada sin una lista!! Sin una buena planificación el tiempo vuela, cada cosa tiene su momento y es necesario establecer unos limites temporales a determinadas tareas, aunque con una buena razón las listas pueden romperse y volverse a crear. "
+diccionario['Trabajo en Equipo'] = "Una de las cosas más enriquecedoras de un trabajo es el equipo que lo conforma, con un equipo competente se aprende más, y se trabaja más rápido y mejor. "
+diccionario['Resuelto'] = " ¡Has ganado! Espero que te haya resultado útil y te hayas divertido."
+var contadorMemori = 0;
 var cv = document.getElementById('cv');
 var cvextendido = document.getElementById('cvextendido');
 var botonsopaletras = document.getElementById('botonsopaletras');
 var resolver = document.getElementById('resolver');
+var memori = document.getElementById('memori');
+var valoresMemori = [];
+
 
 
 
 window.addEventListener('load', function () {
     reloj();
+
     cvextendido.addEventListener('click', jugar);
     botonsopaletras.addEventListener('click', jugarletras);
+    memori.addEventListener('click', jugarMemori);
     resolver.addEventListener('click', resolverjuego);
-    document.getElementById('volverPanel').addEventListener('click', volverPanel);
+    document.getElementById('mostrarPalabras').addEventListener('click', mostrarPalabras);
+    document.getElementById('volverEmpezarSopa').addEventListener('click', volverEmpezarSopa);
+    document.getElementById('volverEmpezarMemori').addEventListener('click', volverEmpezarMemori);
+    document.getElementById('volverSopa').addEventListener('click', volverPanel);
+    document.getElementById('volverMemori').addEventListener('click', volverPanel);
+
 
 });
+
+function jugarMemori() {
+
+    document.getElementById('divMemori').style.display = "block"
+    if (!tableroMemori) {
+        montartableroMemori()
+        tableroMemori = true
+    }
+    document.getElementById('panelJuegos').style.display = 'none'
+    mostrar = true;
+    document.location.href = "#divMemori";
+
+}
+
+function montartableroMemori() {
+
+    habilidades.sort(function () { return Math.random() - 0.5 });
+
+    var tablaM = document.getElementById('panelMemori')
+    var fila = document.createElement('tr');
+    fila.style.width = '600px'
+    tablaM.appendChild(fila)
+    for (i = 1; i <= habilidades.length; i++) {
+        var celda = document.createElement('td');
+        celda.style.width = '150px';
+        celda.style.height = '150px';
+        var button = document.createElement('button');
+        button.setAttribute("class", "card");
+        button.setAttribute('value', habilidades[i - 1]);
+        button.setAttribute('name', habilidades[i - 1]);
+        button.setAttribute('onclick', 'destapar(this)');
+        celda.appendChild(button);
+        fila.appendChild(celda);
+        if (!(i % 4)) {
+            var fila = document.createElement('tr');
+            fila.style.width = '100%';
+            tablaM.appendChild(fila);
+        }
+    }
+}
+
+function destapar(objeto) {
+    var elementos = document.getElementsByClassName('card');
+    if (valoresMemori.length >= 2) {
+        valoresMemori = []
+        for (i = 0; i < elementos.length; i++) {
+            if (elementos[i].value != 'resuelto')
+                elementos[i].innerHTML = ""
+        }
+    }
+    if (objeto.value != 'resuelto') {
+        objeto.innerHTML = objeto.name;
+        objeto.style.color = "#faff80";
+        objeto.style.paddingTop = "40%";
+        valoresMemori.push(objeto.name);
+    }
+
+    if (valoresMemori.length == 2) {
+        if (valoresMemori[0] == valoresMemori[1]) {
+            for (i = 0; i < elementos.length; i++) {
+                if (elementos[i].name == objeto.name) {
+                    elementos[i].style.background = "#0DA2AC";
+                    elementos[i].setAttribute('value', 'resuelto');
+
+                }
+            }
+            Swal.fire({
+                title: objeto.name,
+                text: diccionario[objeto.name],
+            })
+            contadorMemori++
+        }
+    }
+    if (contadorMemori == 8) {
+        Swal.fire({
+            icon: 'success',
+            title: '¡Has ganado!',
+            text: diccionario['Resuelto'],
+        })
+    }
+
+}
 
 function reloj() {
     let date = new Date();
@@ -48,10 +153,10 @@ function reloj() {
             document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es Lunes, la primera oportunidad <br/>que te brinda la semana para ser feliz';
             break;
         case 2:
-            document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> El martes es el día idal para terminar <br> todo lo que no hiciste el lunes';
+            document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> El martes es el día ideal para terminar <br> todo lo que no hiciste el lunes';
             break;
         case 3:
-            document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> ¡Ya es miércoles!, la semana pasa más rápido de lo que piesnas, disfrútala!!';
+            document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> ¡Ya es miércoles!, la semana pasa rápido, <br/> disfrútala!!';
             break;
         case 4:
             document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Haz que este jueves brille <br/>gracias a tu sonrisa';
@@ -80,6 +185,8 @@ function jugar() {
         document.getElementById('presentacion').style.display = 'block';
         document.getElementById('reloj').style.display = 'block';
         document.getElementById('tablacv').style.marginTop = '1%'
+        document.getElementById('container').style.display = 'none';
+        document.getElementById('divMemori').style.display = 'none';
         mostrar = false;
     }
 }
@@ -116,7 +223,7 @@ function montartablero() {
             }
             tabla.appendChild(fila);
         }
-        tablero=true;
+        tablero = true;
     }
 }
 
@@ -152,7 +259,6 @@ function levanto(objeto) {
         if (palabras[i] == solucion) {
             exito = true;
             for (i = 0; i < palabras.length; i++) {
-                console.log(palabras[i])
                 document.getElementById(palabras[i]).style.display = 'none'
             }
             document.getElementById(solucion).style.display = 'block'
@@ -172,16 +278,63 @@ function levanto(objeto) {
 }
 
 function resolverjuego() {
+    document.getElementById("scroll").style.height = "450px";
+    document.getElementById("scroll").style.overflow = "scroll";
+    document.getElementById("sopa").style.height = "auto";
+    document.getElementById("sopa").style.width = "100%";
+
     for (i = 0; i < palabras.length; i++) {
         document.getElementById(palabras[i]).style.display = 'block';
     }
 }
 
+function volverEmpezarSopa() {
+    var elementos = document.getElementsByClassName('lenguajes');
+    for (i = 0; i < elementos.length; i++) {
+        elementos[i].style.display = "none";
+    }
+    document.getElementById("scroll").style.overflow = "visible";
+}
+
+function volverEmpezarMemori() {
+    var panel= document.getElementById('panelMemori')
+    while (panel.firstChild) {
+        console.log('hola')
+        panel.removeChild(panel.firstChild)
+    }
+    montartableroMemori()
+}
+
+function mostrarPalabras() {
+
+    if (!document.getElementById('divlista')) {
+        var divlista = document.createElement('div');
+        divlista.setAttribute('id', 'divlista')
+        var sopa = document.getElementById('sopa');
+        divlista.setAttribute('class', 'lenguajes')
+        var lista = document.createElement('ul');
+
+        for (i = 0; i < palabras.length; i++) {
+            var palabra = document.createElement('li');
+            palabra.innerHTML = palabras[i];
+            lista.appendChild(palabra)
+        }
+        divlista.appendChild(lista);
+        sopa.appendChild(divlista);
+        divlista.style.display = 'block';
+    } else {
+        document.getElementById('divlista').style.display = 'block';
+    }
+
+}
+
 function volverPanel() {
+    volverEmpezarMemori();
+    volverEmpezarSopa();
     document.getElementById('container').style.display = 'none';
+    document.getElementById('divMemori').style.display = 'none';
     document.getElementById('panelJuegos').style.display = 'block';
     for (i = 0; i < palabras.length; i++) {
-        console.log(palabras[i])
         document.getElementById(palabras[i]).style.display = 'none'
     }
     mostrar = false;

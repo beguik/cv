@@ -11,7 +11,7 @@ div.content {
 }
 
 #cabecera {
-    width: 30%;
+    width: 25%;
     height: 100%;
     text-align: center;
     margin: auto
@@ -24,23 +24,25 @@ div.content {
 }
 
 p.maquina {
+    margin-bottom: 5%;
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    font-family: 'Courier New', Courier, monospace;
-    border-right: .15em solid #188DeC;
+    font-family: Flowers;
+    font-size: xx-large;
+    border-right: 2px solid #188DeC;
     margin: 0 5%;
-    color: #525050;
-    animation: typing 8s steps(35) 1s 1 normal both, blink 0.5s steps(1);
+    color:#0DA2AC; 
+    animation: typing 5s steps(35) 2s 1 normal both, blink 0.5s steps(2);
 }
 
-#contenedor{
-    display:flex;  
-    margin: auto; 
+#contenedor {
+    display: flex;
+    margin: auto;
     padding-bottom: 5%;
 }
 
-#divlineatiempo{
+#divlineatiempo {
     width: 30%;
     margin-top: 4%;
     overflow: hidden;
@@ -55,8 +57,8 @@ p.maquina {
     transform: scale(1.5)
 }
 
-#contenedor1{
-    width:70%;
+#contenedor1 {
+    width: 70%;
 }
 
 #presentacion {
@@ -65,18 +67,27 @@ p.maquina {
     color: #525050
 }
 
-a:link{
+a:link {
     text-decoration: none;
 }
+#tablacv{
+    margin:3% 5%
+}
 
-#cv, #cvextendido{
-    width:80%; 
-    height:200px; 
+#thtablacv{
+
+width:50%;
+}
+
+#cv,
+#cvextendido {
+    width: 80%;
+    height: 200px;
     margin-top: 10%;
 }
 
 .boton {
-    background-color: #0DA2AC;
+    background-color:  #0DA2AC;
     position: relative;
     margin: auto;
     display: flex;
@@ -91,18 +102,17 @@ a:link{
     transition-delay: 0.05s;
 }
 
-.botones{
-    color:#faff80; 
-    margin: 20px; 
+.botones {
+    color: #faff80;
+    text-align: center;
+    font-family: Flowers;
+    margin:auto
 }
 
-.titulo{
-    text-align: center; 
-    font-family: Flowers;
-}
-.descripcion{
-    font-size:smaller; 
-    text-align: center; 
+.descripcion {
+    font-size:medium;
+    text-align: center;
+    font-family: Nunito;
     margin: 5%;
 }
 
@@ -124,25 +134,28 @@ div.panelJuegos {
     border-top: 5px dashed #faff80;
     border-bottom: 5px dashed #faff80;
 }
-.botonjuego{
-    width: 50%;  
-    text-align: center; 
+
+.botonjuego {
+    width: 50%;
+    text-align: center;
     padding: 5%;
 }
 
-.container{
-    padding-top:7%;
-    width:80%;
-    margin: auto; 
+.container {
+    padding-top: 7%;
+    width: 80%;
+    margin: auto;
 }
-.box1{
-    color:#0DA2AC; 
-    display:block;
-    text-align: justify; 
+
+.box1 {
+    color: #0DA2AC;
+    display: block;
+    text-align: justify;
     padding-bottom: 5%;
 }
-.box2{
-    width:70%; 
+
+.box2 {
+    width: 70%;
     border-left: 3px solid #0DA2AC;
 }
 
@@ -166,9 +179,15 @@ div.lenguajes {
     padding: 10px;
 }
 
-#volverPanel{
-margin:2%;
-color:#faff80;
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: #525252;
+}
+
+.volverPanel {
+    margin: 2%;
+    color: #faff80;
 }
 
 div.reloj {
