@@ -97,14 +97,16 @@
                     <div class="botonjuego">
                         <button id='botonsopaletras' class="btn btn-secondary btn-block juego">
                             <h1 class="tjuego">Sopa de Letras.</h1>
-                            11 plabras relacionadas con el desarrollo web, a medida que las descubras te contaré mi
-                            experiencia con ellas.
+                            <p class="descripcion">
+                                11 plabras relacionadas con el desarrollo web, a medida que las descubras te contaré mi
+                                experiencia con ellas.</p>
                         </button>
                     </div>
                     <div class="botonjuego">
                         <button id="memori" class="btn btn-secondary btn-block juego" style="height: 100%;">
                             <h1 class="tjuego">Mémori</h1>
-                            Descubre tarjetas iguales y te ire mostrando mis aptitudes personales.
+                            <p class="descripcion"> Descubre tarjetas iguales y te ire mostrando mis aptitudes
+                                personales.</p>
                         </button>
                     </div>
                 </div>
@@ -122,114 +124,113 @@
                 </div>
             </div>
             <div id='container' class="container" style="display: none;">
-
-                <div class="box-cell box1">
+                <div class="box-cell box1;">
                     En esta sopa de letras hay ocultas 11 palabras relacionadas con el mundo del desarrollo web,
                     cuando seleccione una de ellas aparecerá en la derecha la experiencia que tengo
                     con el lenguaje o herramienta seleccionado.
                     Si se da por vencido puede darle a resolver y se mostrarán todas.
                 </div>
-                <div style="display: flex;">
-                    <div id="tablasopaletras" style="width: 50%;">
-                        <table id="sopaletras" style="user-select: none; width:95%" translate="no"></table>
-                        <div style="text-align: center;padding-top:2%;">
-                            <button id="mostrarPalabras" class="btn btn-secondary"
-                                style="color:#faff80;width: 45%;">Mostrar Palabras</button>
-                            <button id="resolver" class="btn btn-secondary"
-                                style="color:#faff80;width: 45%;">Resolver</button>
-                        </div>
-                        <div style="text-align: center;padding-top:2%;">
-                            <button id="volverEmpezarSopa" class="btn btn-secondary"
-                                style="color:#faff80;width: 90%;">Volver a Empezar</button>
-                        </div>
+                <div id="contenedorSopa" style="display: flex;">
+                    <div id="tablasopaletras" style="margin:auto">
+                        <table id="sopaletras" style="user-select: none; width:95%;" translate="no"></table>
                     </div>
-                    <div id="scroll" style="width: 50%;">
-                        <div id="sopa" class="box-cell box2" style="height: auto">
-                            <div id="css" class="lenguajes">
-                                <b><u>CSS:</u></b> El diseño de una web está ligado a este lenguaje que define sus
-                                estilos,
-                                por tanto he trabajado este lenguaje de manera transversal en cada página que he
-                                diseñado.
-                                He trabajado también con framework como <b>Bootstrap</b> o <b>Foundation</b>.
-                            </div>
-                            <div id="html" class="lenguajes">
-                                <b><u>HTML:</u></b> Ni que decir que HTML es un lenguaje básico
-                                para el desarrollo web y
-                                que por tanto lo he ido trabajando en cada página que he realizado, incluyendo los
-                                nuevos
-                                estandares de <b>HTML5</b>.
-                            </div>
-                            <div id="javascript" class="lenguajes">
-                                <b><u>JavaScript:</u></b> Esta misma página está construida con
-                                elementos JS que la hacen interactiva.
-                                Personalmente me gusta mucho este lenguaje que permite realizar proyectos muy atractivos
-                                visualmente y que facilitan la interacción con el usuario.
-                                Además de los elementos que trabajo en esta web con javaScript he trabajado también la
-                                validación de campos en el cliente y peticiones <b>Ajax</b> al servidor.
-                            </div>
-                            <div id="jquery" class="lenguajes">
-                                <b><u>JQuery:</u></b> En algunas ocasiones el trabajo con Jquery facilita la interación
-                                con
-                                el DOM y por eso en algunos proyectos he preferido trabajar algunas partes con esta
-                                tecnología.
-                            </div>
-                            <div id="java" class="lenguajes">
-                                <b><u>Java:</u></b> Mi primera aproximación al mundo de la programación fue con este
-                                lenguaje de
-                                programación y he de decir
-                                que no fue un comienzo fácil, pero una vez interiorizados los conceptos básicos la curva
-                                de
-                                aprendizaje creció exponencialmente.
-                                He trabajado con java la creación de aplicaciones, de sockets, conexión a base de datos
-                                y el
-                                diseño de interfaz gráfica con Java Swing.
-                            </div>
-                            <div id="php" class="lenguajes">
-                                <b><u>PHP:</u></b> Con php he trabajado creando aplicaciones del lado del servido, la
-                                validacion
-                                de objetos y el acceso a base de datos.
-                                He trabajado con php puro y también aprendí a manejarme en el framework de
-                                <b>Laravel</b>.
-                            </div>
-                            <div id="python" class="lenguajes">
-                                <b><u>Python:</u></b>Este lenguje de programación lo aprendí de forma totalmente
-                                autodidacta,
-                                cuando supe que en la empresa, Tangrambpm, donde iba a realizar las prácticas del grado
-                                trabajaba exclusivamente con este lenguaje que no se impartía en el ciclo
-                                decidí realizar el proyecto fin de ciclo, consistente en un portal inmobiliario, en
-                                python
-                                para
-                                ir adquiriendo soltura.
-                                Posteriormente, las prácticas y el posterior trabajo realizado en esta empresa
-                                ha sido desarrollado integramente en python con el framework de <b>Django</b>.
-                            </div>
-                            <div id="git" class="lenguajes">
-                                <b><u>GIT:</u></b> El control de versiones es una herramienta fundamental para el
-                                desarrollo
-                                en
-                                equipo, en el último trabajo realizado
-                                trabajamos tanto con <b>Mercurial</b> como con <b>Git</b>
-                            </div>
-                            <div id="sql" class="lenguajes">
-                                <b><u>SQL:</u></b> Las consultas a base de datos las he trabajado con <b>mySQL</b> y
-                                <b>postgreSQL</b>.
-                            </div>
-                            <div id="wordpress" class="lenguajes">
-                                <b><u>Wordpress:</u></b> Antes de dedicarme al desarrollo Web he trabajado como autónoma
-                                y he desarrollado varias web en wordpress con <b>Elementor</b> y <b>Woocomerce</b>.
-                                También en casos puntuales he trabajado con <b>Prestashop</b> en el marco de un
-                                marketplace.
-                            </div>
-                            <div id="redessociales" class="lenguajes">
-                                <b><u>Redes Sociales:</u></b> He trabajado también las redes sociales y la imagen de la
-                                empresa
-                                Clau Complementos,
-                                atendiendo a las necesiades de la misma.
-                            </div>
+                </div>
+                <div id="scroll" style="width: 100%; margin-top: 2%;">
+                    <div id="sopa" class="box-cell box2" style="height: auto">
+                        <div id="css" class="lenguajes">
+                            <b><u>CSS:</u></b> El diseño de una web está ligado a este lenguaje que define sus
+                            estilos,
+                            por tanto he trabajado este lenguaje de manera transversal en cada página que he
+                            diseñado.
+                            He trabajado también con framework como <b>Bootstrap</b> o <b>Foundation</b>.
+                        </div>
+                        <div id="html" class="lenguajes">
+                            <b><u>HTML:</u></b> Ni que decir que HTML es un lenguaje básico
+                            para el desarrollo web y
+                            que por tanto lo he ido trabajando en cada página que he realizado, incluyendo los
+                            nuevos
+                            estandares de <b>HTML5</b>.
+                        </div>
+                        <div id="javascript" class="lenguajes">
+                            <b><u>JavaScript:</u></b> Esta misma página está construida con
+                            elementos JS que la hacen interactiva.
+                            Personalmente me gusta mucho este lenguaje que permite realizar proyectos muy atractivos
+                            visualmente y que facilitan la interacción con el usuario.
+                            Además de los elementos que trabajo en esta web con javaScript he trabajado también la
+                            validación de campos en el cliente y peticiones <b>Ajax</b> al servidor.
+                        </div>
+                        <div id="jquery" class="lenguajes">
+                            <b><u>JQuery:</u></b> En algunas ocasiones el trabajo con Jquery facilita la interación
+                            con
+                            el DOM y por eso en algunos proyectos he preferido trabajar algunas partes con esta
+                            tecnología.
+                        </div>
+                        <div id="java" class="lenguajes">
+                            <b><u>Java:</u></b> Mi primera aproximación al mundo de la programación fue con este
+                            lenguaje de
+                            programación y he de decir
+                            que no fue un comienzo fácil, pero una vez interiorizados los conceptos básicos la curva
+                            de
+                            aprendizaje creció exponencialmente.
+                            He trabajado con java la creación de aplicaciones, de sockets, conexión a base de datos
+                            y el
+                            diseño de interfaz gráfica con Java Swing.
+                        </div>
+                        <div id="php" class="lenguajes">
+                            <b><u>PHP:</u></b> Con php he trabajado creando aplicaciones del lado del servido, la
+                            validacion
+                            de objetos y el acceso a base de datos.
+                            He trabajado con php puro y también aprendí a manejarme en el framework de
+                            <b>Laravel</b>.
+                        </div>
+                        <div id="python" class="lenguajes">
+                            <b><u>Python:</u></b>Este lenguje de programación lo aprendí de forma totalmente
+                            autodidacta,
+                            cuando supe que en la empresa, Tangrambpm, donde iba a realizar las prácticas del grado
+                            trabajaba exclusivamente con este lenguaje que no se impartía en el ciclo
+                            decidí realizar el proyecto fin de ciclo, consistente en un portal inmobiliario, en
+                            python
+                            para
+                            ir adquiriendo soltura.
+                            Posteriormente, las prácticas y el posterior trabajo realizado en esta empresa
+                            ha sido desarrollado integramente en python con el framework de <b>Django</b>.
+                        </div>
+                        <div id="git" class="lenguajes">
+                            <b><u>GIT:</u></b> El control de versiones es una herramienta fundamental para el
+                            desarrollo
+                            en
+                            equipo, en el último trabajo realizado
+                            trabajamos tanto con <b>Mercurial</b> como con <b>Git</b>
+                        </div>
+                        <div id="sql" class="lenguajes">
+                            <b><u>SQL:</u></b> Las consultas a base de datos las he trabajado con <b>mySQL</b> y
+                            <b>postgreSQL</b>.
+                        </div>
+                        <div id="wordpress" class="lenguajes">
+                            <b><u>Wordpress:</u></b> Antes de dedicarme al desarrollo Web he trabajado como autónoma
+                            y he desarrollado varias web en wordpress con <b>Elementor</b> y <b>Woocomerce</b>.
+                            También en casos puntuales he trabajado con <b>Prestashop</b> en el marco de un
+                            marketplace.
+                        </div>
+                        <div id="redessociales" class="lenguajes">
+                            <b><u>Redes Sociales:</u></b> He trabajado también las redes sociales y la imagen de la
+                            empresa
+                            Clau Complementos,
+                            atendiendo a las necesiades de la misma.
                         </div>
                     </div>
                 </div>
-                <button id="volverSopa"class="btn btn-secondary btn-block volverPanel">Volver al panel
+
+                <div style="text-align: center;padding-top:2%;">
+                    <button id="mostrarPalabras" class="btn btn-secondary" style="color:#faff80;width: 45%;">Mostrar
+                        Palabras</button>
+                    <button id="resolver" class="btn btn-secondary" style="color:#faff80;width: 45%;">Resolver</button>
+                </div>
+                <div style="text-align: center;padding-top:2%;">
+                    <button id="volverEmpezarSopa" class="btn btn-secondary" style="color:#faff80;width: 90%;">Volver a
+                        Empezar</button>
+                </div>
+                <button id="volverSopa" class="btn btn-secondary btn-block volverPanel">Volver al panel
                     de juegos</button>
             </div>
 
@@ -246,11 +247,12 @@
                 </table>
 
                 <div style="padding:5% 25% 0% 25%">
-                    <button id="volverEmpezarMemori"class="btn btn-secondary btn-block volverPanel" >Volver a Empezar </button>
-                    <button id="volverMemori"class="btn btn-secondary btn-block volverPanel" >Volver al panel
-                    de juegos</button>
+                    <button id="volverEmpezarMemori" class="btn btn-secondary btn-block volverPanel">Volver a Empezar
+                    </button>
+                    <button id="volverMemori" class="btn btn-secondary btn-block volverPanel">Volver al panel
+                        de juegos</button>
                 </div>
-                
+
             </div>
             <div id="reloj" class="reloj">
                 <img src="img/59adb20e-8f9f-46e8-8a07-e0feb3092b69.jpg" width="75%">

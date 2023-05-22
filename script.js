@@ -80,7 +80,7 @@ function montartableroMemori() {
 
     var tablaM = document.getElementById('panelMemori')
     var fila = document.createElement('tr');
-    fila.style.width = '600px'
+    fila.style.width = '100%'
     tablaM.appendChild(fila)
     for (i = 1; i <= habilidades.length; i++) {
         var celda = document.createElement('td');
@@ -93,11 +93,20 @@ function montartableroMemori() {
         button.setAttribute('onclick', 'destapar(this)');
         celda.appendChild(button);
         fila.appendChild(celda);
-        if (!(i % 4)) {
-            var fila = document.createElement('tr');
-            fila.style.width = '100%';
-            tablaM.appendChild(fila);
+        if (screen.width < 1024) {
+            if (!(i % 2)) {
+                var fila = document.createElement('tr');
+                fila.style.width = '100%';
+                tablaM.appendChild(fila);
+            }
+        } else {
+            if (!(i % 4)) {
+                var fila = document.createElement('tr');
+                fila.style.width = '100%';
+                tablaM.appendChild(fila);
+            }
         }
+
     }
 }
 
@@ -168,8 +177,9 @@ function reloj() {
             document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es sábado, y el día debería de de tener al menos 48 horas para disfrutarlas';
             break;
     }
-    document.getElementById('despedida').style.fontFamily = "Tiza";
+
     document.getElementById('despedida').style.fontSize = "xx-Large";
+    document.getElementById('despedida').style.fontFamily = "Tiza";
     document.getElementById('despedida').style.color = "#faff80";
 
 }
@@ -184,10 +194,13 @@ function jugar() {
     } else {
         document.getElementById('panelJuegos').style.display = 'none';
         document.getElementById('presentacion').style.display = 'block';
-        document.getElementById('reloj').style.display = 'block';
         document.getElementById('tablacv').style.marginTop = '1%'
         document.getElementById('container').style.display = 'none';
         document.getElementById('divMemori').style.display = 'none';
+        if (screen.width > 1280) {
+            document.getElementById('reloj').style.display = 'block';
+        }
+
         mostrar = false;
     }
 }
@@ -212,7 +225,9 @@ function montartablero() {
                 var cel = 'cel_' + i + '_' + x;
                 celda.setAttribute('id', cel);
                 celda.setAttribute('onmousedown', 'presiono(this)');
+                celda.setAttribute('ontouchstart', 'presiono(this)')
                 celda.setAttribute('onmouseup', 'levanto(this)');
+                celda.setAttribute('ontouchEnd', 'levanto(this)');
                 celda.style.background = '#d3f5ed';
                 celda.style.width = '25px';
                 celda.style.height = '25px';
@@ -229,6 +244,7 @@ function montartablero() {
 }
 
 function presiono(objeto) {
+    console.log('entro');
     valores = objeto.id.split('_');
     var fila = valores[1];
     var columna = valores[2];
@@ -239,10 +255,12 @@ function presiono(objeto) {
     for (e = 1; e <= 14; e++) {
         var capa = "cel_" + Number(fila) + "_" + e;
         crearEvento(document.getElementById(capa), 'mouseover', muevo);
+        crearEvento(document.getElementById(capa), 'touchmove', muevo);
     }
 }
 
 function muevo() {
+    console.log('muevo')
     if (continuar) {
         this.style.background = '#0DA2AC'
         solucion += this.innerHTML;
@@ -279,6 +297,7 @@ function levanto(objeto) {
 }
 
 function resolverjuego() {
+    document.getElementById("scroll").style.display = "block";
     document.getElementById("scroll").style.height = "450px";
     document.getElementById("scroll").style.overflow = "scroll";
     document.getElementById("sopa").style.height = "auto";
@@ -295,10 +314,11 @@ function volverEmpezarSopa() {
         elementos[i].style.display = "none";
     }
     document.getElementById("scroll").style.overflow = "visible";
+    document.getElementById("scroll").style.display = "none";
 }
 
 function volverEmpezarMemori() {
-    var panel= document.getElementById('panelMemori')
+    var panel = document.getElementById('panelMemori')
     while (panel.firstChild) {
         console.log('hola')
         panel.removeChild(panel.firstChild)
@@ -326,6 +346,7 @@ function mostrarPalabras() {
     } else {
         document.getElementById('divlista').style.display = 'block';
     }
+    document.getElementById('scroll').style.display = 'block';
 
 }
 
