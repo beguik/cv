@@ -1,7 +1,8 @@
 body {
     font-family: 'Nunito';
     padding: 1%;
-    background-color: #faff80
+    background-color: #faff80;
+
 }
 
 div.content {
@@ -235,4 +236,27 @@ div.despedida {
         width: 100%;
     }
 
+}
+
+@media screen and (max-width:600px){
+    #reloj{
+        display: none;
+    }
+    .descripcion{
+        display: none;
+    }
+    #cabecera {
+        width: 50%;
+    }
+    p.maquina {
+        font-size: large;
+    }
+    .contacto {
+        
+        font-size: 12px;
+        color: #faff80;
+        width: 90%;
+        margin: auto
+    }
+   
 }

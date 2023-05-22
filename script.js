@@ -171,6 +171,7 @@ function reloj() {
     document.getElementById('despedida').style.fontFamily = "Tiza";
     document.getElementById('despedida').style.fontSize = "xx-Large";
     document.getElementById('despedida').style.color = "#faff80";
+
 }
 
 function jugar() {
