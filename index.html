@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Belén Guijarro - Portfolio</title>
+  <link rel="icon" type="image/png" href="img/icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="styles.css">
@@ -50,16 +51,16 @@
       <div id="tareas" class="project1">
         <div class="tarjet">
           <h3>Lista Tareas</h3>
-          <p class="par">Pequeña aplicación para organizarse, editar tareas y borrarlas</p>
-          <p class="subpar">Las listas son un elemento importante en la organización del tiempo</p>
+          <p class="par">Pequeña aplicación para organizarse, editar tareas y borrarlas.</p>
+          <p class="subpar">Las listas son un elemento importante en la organización del tiempo.</p>
         </div>
       </div>
 
-      <div class="project1">
+      <div id="pswd" class="project1">
         <div class="tarjet">
-          <img src="project2.jpg" alt="Proyecto 2">
           <h3>Generador Contraseñas</h3>
-          <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
+          <p class="par">Haz que tus contraseñas sean seguras con nuestro generador.</p>
+          <p class="subpar">Elige el tamaño de la contraseña y los caracteres que quieres usar.</p>
         </div>
       </div>
 
@@ -86,7 +87,42 @@
         </div>
       </div>
     </div>
+
+    <div>
+      <div id="app-pswd" class="apps">
+        <div class="container-pdw">
+          <h1>Generador de Contraseñas</h1>
+          <div class="password-container">
+            <input type="text" id="password" readonly>
+            <div class="options-container">
+              <label for="length">Longitud:</label>
+              <input type="number" id="length" min="4" max="32" value="12">
+            </div>
+            <div class="options-container">
+              <label for="uppercase">Mayúsculas:</label>
+              <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="options-container">
+              <label for="lowercase">Minúsculas:</label>
+              <input type="checkbox" id="lowercase" checked>
+            </div>
+            <div class="options-container">
+              <label for="numbers">Números:</label>
+              <input type="checkbox" id="numbers" checked>
+            </div>
+            <div class="options-container">
+              <label for="symbols">Símbolos:</label>
+              <input type="checkbox" id="symbols" checked>
+            </div>
+            <button id="generate-btn">Generar Contraseña</button>
+          </div>
+          <div class="button-volver">
+            <button id="button-pswd-volver">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
+    
 
 
     <section id="projects2" style="display:inline">
@@ -94,8 +130,7 @@
         <div id="clima" class="project2">
           <div class="tarjet">
             <h3>Consulta del Clima</h3>
-            <p class="par">Selecciona la ubicación y consulta el tiempo que hace actualmente y un pronostico de las
-              próximas tres hora y los próximos cinco días.</p>
+            <p class="par">Selecciona la ubicación y consulta el tiempo que hace actualmente.</p>
             <p class="subpar">En este proyecto trabajamos con la api de openweathermap</p>
           </div>
         </div>
@@ -228,11 +263,11 @@
     </section>
 
 
-    <section id="contact">
-      <h2>Contacto</h2>
-      <p>https://www.linkedin.com/in/beguik/ <br/>
-        https://github.com/beguik<br/>
-      Teléfono:687770954</p>
+    <section id=" contact">
+              <h2>Contacto</h2>
+              <p>https://www.linkedin.com/in/beguik/ <br />
+                https://github.com/beguik<br />
+                Teléfono:687770954</p>
     </section>
 
     <footer>

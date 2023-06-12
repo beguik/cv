@@ -250,6 +250,33 @@ li {
   margin:3px;
 }
 
+/*Contraseñas*/
+.container-pdw {
+  text-align: center;
+  padding: 20px;
+}
+
+.password-container {
+  margin-top: 20px;
+}
+
+.options-container {
+  margin-top: 10px;
+}
+
+#password {
+  width: 300px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#generate-btn {
+  margin-top: 2%;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+  
 
 /* Estilos para el footer */
 footer {

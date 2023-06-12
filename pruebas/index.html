@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generador de Currículum</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Generador de Currículum</h1>
+
+  <div class="container">
+    <h2>Datos Personales</h2>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <h2>Experiencia Laboral</h2>
+    <div class="experiencia-container">
+      <div class="form-group">
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa">
+      </div>
+      <div class="form-group">
+        <label for="puesto">Puesto:</label>
+        <input type="text" id="puesto">
+      </div>
+      <div class="form-group">
+        <label for="periodo">Periodo:</label>
+        <input type="text" id="periodo">
+      </div>
+    </div>
+
+    <button id="agregar-experiencia-btn">Agregar Experiencia</button>
+
+    <h2>Educación</h2>
+    <div class="educacion-container">
+      <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo">
+      </div>
+      <div class="form-group">
+        <label for="institucion">Institución:</label>
+        <input type="text" id="institucion">
+      </div>
+      <div class="form-group">
+        <label for="anio">Año:</label>
+        <input type="text" id="anio">
+      </div>
+    </div>
+
+    <button id="agregar-educacion-btn">Agregar Educación</button>
+
+    <button id="generar-cv-btn">Generar Currículum</button>
+
+    <div id="cv-container" class="hidden">
+      <h2>Curriculum Vitae</h2>
+      <div id="cv-datos"></div>
+      <div id="cv-experiencia"></div>
+      <div id="cv-educacion"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

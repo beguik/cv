@@ -104,7 +104,6 @@ function renderTasks() {
         taskList.appendChild(taskItem);
     });
 }
-
 function editTask(task) {
     Swal.fire({
         title: 'Editar tarea',
@@ -159,3 +158,51 @@ taskForm.addEventListener('submit', function (event) {
         taskInput.value = '';
     }
 });
+
+/*Funciones generador contraseña*/ 
+var pswd = document.getElementById('pswd');
+var app_pswd = document.getElementById('app-pswd');
+var button_pswd = document.getElementById('button-pswd-volver');
+
+pswd.addEventListener('click',()=>{
+    app_pswd.style.display="block"
+})
+button_pswd.addEventListener('click',()=>{
+    app_pswd.style.display="none";
+})
+
+function generarContrasena(longitud, incluirMayusculas, incluirMinusculas, incluirNumeros, incluirSimbolos) {
+    var caracteres = '';
+    var contrasena = '';
+  
+    if (incluirMayusculas) {
+      caracteres += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    }
+    if (incluirMinusculas) {
+      caracteres += 'abcdefghijklmnopqrstuvwxyz';
+    }
+    if (incluirNumeros) {
+      caracteres += '0123456789';
+    }
+    if (incluirSimbolos) {
+      caracteres += '!@#$%^&*()-_=+';
+    }
+  
+    for (let i = 0; i < longitud; i++) {
+      var indice = Math.floor(Math.random() * caracteres.length);
+      contrasena += caracteres.charAt(indice);
+    }
+    return contrasena;
+  }
+  
+  function generarContrasenaSegura() {
+    var longitudContrasena = parseInt(document.getElementById('length').value);
+    var incluirMayusculas = document.getElementById('uppercase').checked;
+    var incluirMinusculas = document.getElementById('lowercase').checked;
+    var incluirNumeros = document.getElementById('numbers').checked;
+    var incluirSimbolos = document.getElementById('symbols').checked;
+  
+    var contrasenaGenerada = generarContrasena(longitudContrasena, incluirMayusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
+    document.getElementById('password').value = contrasenaGenerada;
+  }
+  document.getElementById('generate-btn').addEventListener('click', generarContrasenaSegura);
