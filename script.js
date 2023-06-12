@@ -1,3 +1,19 @@
+
+/*ajustar las anclas por el menu de nav fijado*/
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      const targetOffset = targetElement.offsetTop;
+  
+      window.scrollTo({
+        top: targetOffset - 110, 
+        behavior: 'smooth'
+      });
+    });
+  });
+
 /*app-clima*/
 const clima = document.getElementById('clima');
 const app_clima = document.getElementById('app-clima');
