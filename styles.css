@@ -1,0 +1,257 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #597B6A;
+  color: #EDECED;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px;
+
+}
+
+/*font*/
+h2 {
+  font-family: 'Concert One', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: #595454;
+}
+
+h3 {
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #597B6A;
+}
+
+.center {
+  text-align: center;
+}
+
+/*nav*/
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  text-align: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #EDECED;
+  text-decoration: none;
+}
+
+.avatar {
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+}
+
+/*name*/
+.shade {
+  font-size: 5vw;
+  font-family: 'Concert One', sans-serif;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#home {
+  padding: 50px 50px 0px;
+}
+
+#home h1 {
+  margin-bottom: 0.5rem;
+}
+
+/*about*/
+#about {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 2;
+  padding-top: 0px;
+}
+
+.container-about {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-heading h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.about-text {
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #666;
+}
+
+/*projects*/
+
+.frame {
+  display: flex;
+  padding: 2% 5%;
+}
+
+.project1 {
+  display: inline;
+  float: left;
+  width: 30%;
+  padding: 0% 2%;
+}
+
+.project2 {
+  display: inline;
+  float: left;
+  width: 30%;
+  padding: 0% 2%;
+}
+
+.tarjet {
+  border-radius: 30px;
+  border: 2px solid #597B6A;
+  padding: 2%;
+
+}
+
+.par {
+  text-align: justify;
+}
+
+.subpar {
+  text-align: justify;
+  font-size: small;
+}
+
+/*aplicaión clima*/
+.apps {
+  display:none;
+  text-align: center;
+  margin: 0% 25%;
+  padding: 1% 5%;
+  background-color:  #9BBDB2
+  
+}
+
+select {
+  padding: 9px;
+  margin-right: 9px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #597B6A;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#clima-info {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.button-volver{
+  text-align: right;
+}
+
+/*app lista tareas*/
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #597B6A;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #597B6A;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.agregar{
+  margin-top:2%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task-text {
+  width: 80%;
+  overflow-wrap: break-word;
+}
+
+.task-actions {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions{
+  margin:3px;
+}
+
+
+/* Estilos para el footer */
+footer {
+  background-color: #EDECED;
+}

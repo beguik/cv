@@ -1,468 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <title>CV BelénGC</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belén Guijarro - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="padding: 1%; background-color: #faff80">
-    <header>
-        <div class="content" style="height: 300px; width: 100%;border-bottom:2px solid rgb(86, 167, 167)">
-            <div style="width:30%; height: 100%; text-align:center; margin:auto">
-                <img src="img/myAvatar.png" style="border-radius: 50%; width: 150px; margin:10% 0 5% 0">
-                <p class="maquina"
-                    style='animation:typing 8s steps(35) 1s 1 normal both, blink 0.5s steps(1);color: #525050'>
-                    <b>Hola soy Belén, y este es mi CV ...</b>
-                </p>
-            </div>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><img class="avatar" src="img/foto blanco y negro.jpg"></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1 class="shade">Belén Guijarro</h1>
+    <h2>Desarrolladora Web</h2>
+  </section>
+
+  <section id="about">
+    <div class="container-about">
+      <h2 class="underline">Sobre mí</h2>
+      <p>Hace algunos años descubrí mi pasión por el desarrollo web y desde entonces me he fascinado con las infinitas
+        posibilidades que ofrece.
+        Me encanta imaginar, crear, revisar y mejorar páginas web que brinden experiencias de usuario satisfactorias y
+        contenidos educativos y productivos.
+        Para adquirir los conocimientos necesarios, realicé una formación especializada que me brindó las bases sólidas
+        y las herramientas esenciales para seguir aprendiendo por mi cuenta.
+        A lo largo de mi trayectoria, he trabajado en diversos proyectos de desarrollo web,
+        siempre buscando nuevos lenguajes de programación y diseños para crear interfaces claras, prácticas y fáciles de
+        usar.
+      </p>
+    </div>
+  </section>
+  <h2 class="underline center">Proyectos</h2>
+
+  <section id="projects1">
+    <div class="frame">
+      <div id="tareas" class="project1">
+        <div class="tarjet">
+          <h3>Lista Tareas</h3>
+          <p class="par">Pequeña aplicación para organizarse, editar tareas y borrarlas</p>
+          <p class="subpar">Las listas son un elemento importante en la organización del tiempo</p>
         </div>
-    </header>
-    <div style="display:flex;  margin: auto; padding-bottom: 5%;">
-        <div id="divlineatiempo" style="width: 30%;">
-            <a target="_blank" href="img/lineatemp.jpg">
-                <img id="lineatiempo" src="img/lineatemp.jpg" width="100%">
-            </a>
+      </div>
 
+      <div class="project1">
+        <div class="tarjet">
+          <img src="project2.jpg" alt="Proyecto 2">
+          <h3>Generador Contraseñas</h3>
+          <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
         </div>
-        <div style="width:70%;">
-            <div id="presentacion">
-                Bienvenido a este espacio donde pretendo presentarme y mostrar mis habilidades
-                personales y profesionales en la medida que el espacio lo permite. <br />
-                Hace algunos años descubrí el mundo del desarrollo web y me gustó tanto que decidi dar un giro a mi
-                formación, a partir de ese momento me he dedicado a aprender, practicar e investigar este mundo que
-                tantas
-                posibilidades de crecimiento profesional tiene.
+      </div>
 
-                <br /> A continuación te propongo que eches un vistazo a mi curriculum y si tienes tiempo te entretengas
-                con
-                algunos de los juegos que he diseñado para que sea más amena la visita a esta página
-            </div>
-            <table style="width: 100%;">
-                <tr style="height: 200px;">
-                    <th>
-                        <div id='cv' class="boton" style="width:80%; height:200px; margin-top: 10%;">
-                            <a target="_self" href="img/CvBelénGuijarroCubero.jpg" style="text-decoration: none;">
-                                <div style="color:#faff80; ">
-                                    <h1 style="text-align: center; margin-top: 10%; font-family: Flowers;"><b>Ahora no
-                                            tengo
-                                            tiempo</b></h1>
-                                    <p style="font-size:smaller; text-align: center; margin: 5%;">Si pulsas este botón
-                                        te
-                                        mostraré mi curriculum de forma simplificada, indicando los
-                                        aspectos más relevantes de mi trayectoria laboral</p>
-                                </div>
-                            </a>
-                        </div>
-                    </th>
-                    <th>
-                        <a href="#" style="text-decoration: none;">
-                            <div id='cvextendido' class="boton" style="width:80%; height: 200px; margin-top: 10%; ">
-                                <div style="color:#faff80; margin: 20px; ">
-                                    <h1 style="text-align: center; margin-top: 10%;font-family: Flowers;"><b> Hemos
-                                            venido a
-                                            jugar!</b></h1>
-                                    <p style="font-size:smaller; text-align: center; margin: 5%;">Si pulsas este botón
-                                        te
-                                        mostraré mis habilidades profesionales miestras te entretienes
-                                        resolviendo pequeños juegos realizados en html, css y javaScript.</p>
-                                </div>
-                        </a>
-
-                    </th>
-                </tr>
-            </table>
-            <div id='panelJuegos' class="panelJuegos" style="display: none; ">
-                <div style="display:flex">
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
-                        <button id='botonsopaletras' class="btn btn-secondary btn-block juego">
-                            <h1 class="tjuego">Sopa de Letras.</h1>
-                            11 plabras relacionadas con el desarrollo web, a medida que las descubras te contaré mi
-                            experiencia con ellas.
-                        </button>
-                    </div>
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
-                        <button class="btn btn-secondary btn-block juego" style="height: 100%;">
-                            <h1 class="tjuego">Mémori</h1>
-                            Descubre tarjetas iguales y te ire mostrando mis aptitudes personales.
-                        </button>
-                    </div>
-                </div>
-                <div style="display:flex">
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
-                        <button class="btn btn-secondary btn-block juego">
-                            <h1 class="tjuego">En elaboración</h1>
-                        </button>
-                    </div>
-                    <div style="width: 50%;  text-align: center; padding: 5%;">
-                        <button class="btn btn-secondary btn-block juego">
-                            <h1 class="tjuego">En elaboración</h1>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div id='container' class="container" style="display: none;">
-
-                <div class="box-cell box1"
-                    style="width: 70%; margin: auto; color:#0DA2AC; display:block;text-align: justify; padding-bottom: 5%;">
-                    En esta sopa de letras hay ocultas 11 palabras
-                    relacionadas con el mundo del desarrollo web,
-                    cuando seleccione una de ellas aparecerá en la derecha la experiencia que tengo con estas
-                    herramientas,
-                    pero si no tiene ganas o tiempo para jugar puede darle a resolvel y se mostrarán todas.
-                </div>
-                <div style="display:flex">
-                    <div>
-                        <table id="sopaletras" style="user-select: none; width:95%" translate="no"></table>
-                        <div style="text-align: center;padding-top:2%;">
-                            <button id="resolver" class="btn btn-secondary"
-                                style="color:#faff80;width: 45%;">Resolver</button>
-                        </div>
-                    </div>
-                    <div id="sopa" class="box-cell box2" style="width:40%; border-left: 3px solid #0DA2AC;">
-                        <div id="css" class="lenguajes">
-                            <b><u>CSS:</u></b> El diseño de una web está ligado a este lenguaje que define sus estilos,
-                            por tanto he trabajado este lenguaje de manera transversal en cada página que he diseñado.
-                            He trabajado también con framework como <b>Bootstrap</b> o <b>Foundation</b>.
-                        </div>
-                        <div id="html" class="lenguajes">
-                            <b><u>HTML:</u></b> Ni que decir que HTML es un lenguaje básico
-                            para el desarrollo web y
-                            que por tanto lo he ido trabajando en cada página que he realizado, incluyendo los nuevos
-                            estandares de <b>HTML5</b>.
-                        </div>
-                        <div id="js" class="lenguajes">
-                            <b><u>JavaScript:</u></b> Esta misma página está construida con
-                            elementos JS que la hacen interactiva.
-                            Personalmente me gusta mucho este lenguaje que permite realizar proyectos muy atractivos
-                            visualmente y que facilitan la interacción con el usuario.
-                            Además de los elementos que trabajo en esta web con javaScript he trabajado también la
-                            validación de campos en el cliente y peticiones <b>Ajax</b> al servidor.
-                        </div>
-                        <div id="jquery" class="lenguajes">
-                            <b><u>JQuery:</u></b> En algunas ocasiones el trabajo con Jquery facilita la interación con
-                            el
-                            DOM y por eso
-                            en algunos proyectos he preferido trabajar algunas partes con esta tecnología.
-
-                        </div>
-                        <div id="java" class="lenguajes">
-                            <b><u>Java:</u></b> Mi primera aproximación al mundo de la programación fue con este
-                            lenguaje de
-                            programación y he de decir
-                            que no fue un comienzo fácil, pero una vez interiorizados los conceptos básicos la curva de
-                            aprendizaje creció exponencialmente.
-                            He trabajado con java la creación de aplicaciones, de sockets, conexión a base de datos y el
-                            diseño de interfaz gráfica con Java Swing.
-                        </div>
-                        <div id="php" class="lenguajes">
-                            <b><u>PHP:</u></b> Con php he trabajado creando aplicaciones del lado del servido, la
-                            validacion
-                            de objetos y el acceso a base de datos.
-                            He trabajado con php puro y también aprendí a manejarme en el framework de <b>Laravel</b>.
-                        </div>
-                        <div id="python" class="lenguajes">
-                            <b><u>Python:</u></b>Este lenguje de programación lo aprendí de forma totalmente
-                            autodidacta,
-                            cuando supe que en la empresa, Tangrambpm, donde iba a realizar las prácticas del grado
-                            trabajaba exclusivamente con este lenguaje que no se impartía en el ciclo
-                            decidí realizar el proyecto fin de ciclo, consistente en un portal inmobiliario, en python
-                            para
-                            ir adquiriendo soltura.
-                            Posteriormente, las prácticas y el posterior trabajo realizado en esta empresa
-                            ha sido desarrollado integramente en python con el framework de <b>Django</b>.
-                        </div>
-                        <div id="git" class="lenguajes">
-                            <b><u>GIT:</u></b> El control de versiones es una herramienta fundamental para el desarrollo
-                            en
-                            equipo, en el último trabajo realizado
-                            trabajamos tanto con <b>Mercurial</b> como con <b>Git</b>
-                        </div>
-                        <div id="sql" class="lenguajes">
-                            <b><u>SQL:</u></b> Las consultas a base de datos las he trabajado con <b>mySQL</b> y
-                            <b>postgreSQL</b>.
-                        </div>
-                        <div id="wordpress" class="lenguajes">
-                            <b><u>Wordpress:</u></b> Antes de dedicarme al desarrollo Web he trabajado como autónoma
-                            y he desarrollado varias web en wordpress con <b>Elementor</b> y <b>Woocomerce</b>.
-                            También en casos puntuales he trabajado con <b>Prestashop</b> en el marco de un marketplace.
-                        </div>
-                        <div id="redessociales" class="lenguajes">
-                            <b><u>Redes Sociales:</u></b> He trabajado también las redes sociales y la imagen de la
-                            empresa
-                            Clau Complementos,
-                            atendiendo a las necesiades de la misma.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="reloj" class="reloj">
-                <img src="img/59adb20e-8f9f-46e8-8a07-e0feb3092b69.jpg" width="100%">
-                <div id='despedida' class="despedida"></div>
-
-
-            </div>
+      <div class="project1">
+        <div class="tarjet">
+          <img src="project2.jpg" alt="Proyecto2">
+          <h3>Generador Curriculum</h3>
+          <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
         </div>
-
+      </div>
+    </div>
+  </section>
+  <section id="answers0">
+    <div>
+      <div id="app-tareas" class="apps">
+        <h1>Lista de Tareas</h1>
+        <form id="taskForm">
+          <input type="text" id="taskInput" placeholder="Agregar una tarea">
+          <button class="agregar" type="submit">Agregar</button>
+        </form>
+        <ul id="taskList"></ul>
+        <div class="button-volver">
+          <button id="button-tareas-volver">Cerrar</button>
+        </div>
+      </div>
+    </div>
     </div>
 
 
-    <footer style="background-color:#0DA2AC; height: 75px;">
-        <div style="padding: 1%;">
-            <table class="contacto">
-                <tr>
-                    <th>
-                        Belén María Guijarro Cubero
-                    </th>
-                    <th>
-                        <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;belenguijarrocubero@gmail.com
-                    </th>
-                    <th>
-                        <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;687770954
-                    </th>
-                    <th>
-                        <i class="fa fa-map-marker" aria-hidden="true"></i></i>&nbsp;&nbsp;Córdoba
-                    </th>
-                </tr>
-            </table>
+    <section id="projects2" style="display:inline">
+      <div class="frame">
+        <div id="clima" class="project2">
+          <div class="tarjet">
+            <h3>Consulta del Clima</h3>
+            <p class="par">Selecciona la ubicación y consulta el tiempo que hace actualmente y un pronostico de las
+              próximas tres hora y los próximos cinco días.</p>
+            <p class="subpar">En este proyecto trabajamos con la api de openweathermap</p>
+          </div>
         </div>
+
+        <div class="project2">
+          <div class="tarjet">
+            <img src="project2.jpg" alt="Proyecto 2">
+            <h3>Consulta Noticias</h3>
+            <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
+          </div>
+        </div>
+
+        <div class="project2">
+          <div class="tarjet">
+            <img src="project2.jpg" alt="Proyecto 2">
+            <h3>Plataforma Aprendizaje</h3>
+            <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="answers">
+      <div>
+        <div id="app-clima" class="apps">
+          <h3>Seleccione Ciudad</h3>
+          <select id="city-select">
+            <optgroup label="Andalucía">
+              <option value="Almería">Almería</option>
+              <option value="Cádiz">Cádiz</option>
+              <option value="Córdoba">Córdoba</option>
+              <option value="Granada">Granada</option>
+              <option value="Huelva">Huelva</option>
+              <option value="Jaén">Jaén</option>
+              <option value="Málaga">Málaga</option>
+              <option value="Sevilla">Sevilla</option>
+            </optgroup>
+            <optgroup label="Aragón">
+              <option value="Huesca">Huesca</option>
+              <option value="Teruel">Teruel</option>
+              <option value="Zaragoza">Zaragoza</option>
+            </optgroup>
+            <optgroup label="Asturias">
+              <option value="Asturias">Asturias</option>
+            </optgroup>
+            <optgroup label="Baleares">
+              <option value="Illes Balears">Islas Baleares</option>
+            </optgroup>
+            <optgroup label="Canarias">
+              <option value="Las Palmas">Las Palmas</option>
+              <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+            </optgroup>
+            <optgroup label="Cantabria">
+              <option value="Cantabria">Cantabria</option>
+            </optgroup>
+            <optgroup label="Castilla-La Mancha">
+              <option value="Albacete">Albacete</option>
+              <option value="Ciudad Real">Ciudad Real</option>
+              <option value="Cuenca">Cuenca</option>
+              <option value="Guadalajara">Guadalajara</option>
+              <option value="Toledo">Toledo</option>
+            </optgroup>
+            <optgroup label="Castilla y León">
+              <option value="Ávila">Ávila</option>
+              <option value="Burgos">Burgos</option>
+              <option value="León">León</option>
+              <option value="Palencia">Palencia</option>
+              <option value="Salamanca">Salamanca</option>
+              <option value="Segovia">Segovia</option>
+              <option value="Soria">Soria</option>
+              <option value="Valladolid">Valladolid</option>
+              <option value="Zamora">Zamora</option>
+            </optgroup>
+            <optgroup label="Cataluña">
+              <option value="Barcelona">Barcelona</option>
+              <option value="Girona">Girona</option>
+              <option value="Lleida">Lleida</option>
+              <option value="Tarragona">Tarragona</option>
+            </optgroup>
+            <optgroup label="Ceuta">
+              <option value="Ceuta">Ceuta</option>
+            </optgroup>
+            <optgroup label="Comunidad de Madrid">
+              <option value="Madrid">Madrid</option>
+            </optgroup>
+            <optgroup label="Comunidad Valenciana">
+              <option value="Alicante">Alicante</option>
+              <option value="Castellón">Castellón</option>
+              <option value="Valencia">Valencia</option>
+            </optgroup>
+            <optgroup label="Extremadura">
+              <option value="Badajoz">Badajoz</option>
+              <option value="Cáceres">Cáceres</option>
+            </optgroup>
+            <optgroup label="Galicia">
+              <option value="A Coruña">A Coruña</option>
+              <option value="Lugo">Lugo</option>
+              <option value="Ourense">Ourense</option>
+              <option value="Pontevedra">Pontevedra</option>
+            </optgroup>
+            <optgroup label="La Rioja">
+              <option value="La Rioja">La Rioja</option>
+            </optgroup>
+            <optgroup label="Melilla">
+              <option value="Melilla">Melilla</option>
+            </optgroup>
+            <optgroup label="Navarra">
+              <option value="Navarra">Navarra</option>
+            </optgroup>
+            <optgroup label="País Vasco">
+              <option value="Álava">Álava</option>
+              <option value="Gipuzkoa">Guipúzcoa</option>
+              <option value="Bizkaia">Vizcaya</option>
+            </optgroup>
+            <optgroup label="Región de Murcia">
+              <option value="Murcia">Murcia</option>
+            </optgroup>
+          </select>
+          <button id="search-btn">Buscar</button>
+          <div id="clima-info"></div>
+          <div class="button-volver">
+            <button id="button-clima-volver" ">Cerrar</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </section>
+
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>https://www.linkedin.com/in/beguik/ <br/>
+        https://github.com/beguik<br/>
+      Teléfono:687770954</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Belén Guijarro</p>
     </footer>
-    <script src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <script>
-        var tabla = document.getElementById('sopaletras');
-        //definimos el valor que contendrán las celdas
-        var letras = [
-            ['i', 'c', 's', 's', 'n', 'g', 'h', 't', 'm', 'l', 'd', 'j', 's', 'r'],
-            ['n', 'j', 'j', 'q', 'u', 'e', 'r', 'y', 'r', 'i', 'p', 't', 'p', 'o'],
-            ['p', 'd', 'b', 'o', 'x', 'e', 'x', 'b', 'h', 'e', 'b', 's', 'q', 'l'],
-            ['b', 'p', 'h', 'p', 'o', 't', 'a', 'b', 'a', 'x', 'e', 'l', 'p', 'k'],
-            ['m', 'o', 'x', 'b', 'm', 'v', 'x', 'e', 'u', 'h', 'r', 'f', 'p', 'l'],
-            ['h', 'd', 'j', 'u', 'n', 'l', 'o', 'o', 'p', 'y', 't', 'h', 'o', 'n'],
-            ['i', 'o', 'r', 'e', 'j', 't', 'b', 'd', 'j', 't', 'u', 'k', 'r', 'y'],
-            ['q', 'j', 'a', 'v', 'a', 'y', 'p', 'h', 'l', 'n', 'q', 'l', 'z', 'r'],
-            ['i', 'w', 'k', 'd', 'j', 'a', 's', 'q', 'l', 'f', 'v', 'z', 'r', 'c'],
-            ['l', 'k', 'j', 'l', 'm', 'r', 'r', 'v', 's', 'l', 'y', 'g', 'a', 'x'],
-            ['h', 'o', 'n', 't', 'j', 'w', 'w', 'o', 'i', 'j', 'a', 'v', 'a', 'o'],
-            ['e', 'w', 'o', 'r', 'd', 'p', 'r', 'e', 's', 's', 'g', 'e', 'a', 'e'],
-            ['r', 'e', 'd', 'e', 's', 's', 'o', 'c', 'i', 'a', 'l', 'e', 's', 'p'],
-            ['s', 'z', 's', 'x', 'c', 'r', 'l', 'j', 'c', 'j', 'z', 'g', 'i', 't'],
-        ];
-        var palabras = ['js', 'html', 'css', 'jquery', 'php', 'java', 'sql', 'wordpress', 'redessociales', 'python', 'git']
-        var claves = []
-        //definimos la palabra que estamos buscando
-        var solucion = ""
-        //variable para parar la seleccion de celdas
-        var continuar = false;
-        var mostrar = false
-        var cv = document.getElementById('cv');
-        var cvextendido = document.getElementById('cvextendido');
-        var botonsopaletras = document.getElementById('botonsopaletras');
-        var resolver = document.getElementById('resolver');
-
-
-        window.addEventListener('load', function () {
-            cvextendido.addEventListener('click', jugar);
-            botonsopaletras.addEventListener('click', jugarletras);
-            resolver.addEventListener('click', resolverjuego);
-            console.log(mostrar)
-            reloj();
-
-
-        });
-        function reloj() {
-            let date = new Date();
-            switch (date.getDay()) {
-                case 11:
-                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es el último día de la semana, disfrútalo <br/>¡Feliz Domingo!';
-                    break;
-                case 1:
-                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es Lunes, la primera oportunidad <br/>que te brinda la semana para ser feliz';
-                    break;
-                case 2:
-                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> El martes es el día idal para terminar <br> todo lo que no hiciste el lunes';
-                    break;
-                case 3:
-                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> ¡Ya es miércoles!, la semana pasa más rápido de lo que piesnas, disfrútala!!';
-                    break;
-                case 4:
-                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Haz que este jueves brille <br/>gracias a tu sonrisa';
-                    break;
-                case 5:
-                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy no podía haber amanecido mejor.... ¡es viernes!, asi que a disfrutarlo';
-                    break;
-                case 0:
-                    document.getElementById('despedida').innerHTML = 'Gracias por tu tiempo, y recuerda: <br/> Hoy es sábado, y el día debería de de tener al menos 48 horas para disfrutarlas';
-                    break;
-            }
-            document.getElementById('despedida').style.fontFamily = "Tiza";
-            document.getElementById('despedida').style.fontSize = "xx-Large";
-            document.getElementById('despedida').style.color = "#faff80";
-
-
-
-
-
-        }
-        function resolverjuego() {
-            console.log('resolver')
-            for (i = 0; i < palabras.length; i++) {
-                console.log(palabras[i])
-                document.getElementById(palabras[i]).style.display = 'block'
-
-            }
-
-        }
-        function resolverpalabras() {
-            console.log('lista')
-            var lista = document.createElement('div')
-            var texto = document.createTextNode("hola")
-            lista.appendChild(texto)
-            document.getElementById('container').appendChild(lista)
-        }
-
-        function jugar() {
-            console.log('entra')
-            if (!mostrar) {
-                document.getElementById('panelJuegos').style.display = 'block';
-                document.getElementById('presentacion').style.display = 'none';
-                document.getElementById('reloj').style.display = 'none';
-
-                mostrar = true;
-            } else {
-                document.getElementById('panelJuegos').style.display = 'none';
-                document.getElementById('presentacion').style.display = 'block';
-                document.getElementById('reloj').style.display = 'block';
-                mostrar = false;
-            }
-
-
-
-        }
-        function jugarletras() {
-            document.getElementById('container').style.display = 'block';
-            montartablero();
-            document.location.href = "#sopa";
-        }
-
-        function montartablero() {
-            /*tabla.style.background = '#d3f5ed';*/
-            tabla.style.margin = 'auto';
-            for (i = 0; i < letras.length; i++) {
-                var fila = document.createElement('tr');
-                var fil = 'fil_' + i;
-                fila.setAttribute('id', fil);
-                for (x = 0; x < letras[i].length; x++) {
-                    var celda = document.createElement('th');
-                    var cel = 'cel_' + i + '_' + x;
-                    celda.setAttribute('id', cel);
-                    celda.setAttribute('onmousedown', 'presiono(this)');
-                    celda.setAttribute('onmouseup', 'levanto(this)');
-
-                    celda.style.background = '#d3f5ed';
-                    celda.style.width = '25px';
-                    celda.style.height = '25px';
-                    celda.style.color = '#0DA2AC';
-                    celda.style.border = '1px solid #0DA2AC';
-                    celda.style.textAlign = 'center';
-                    celda.innerHTML = letras[i][x];
-                    fila.appendChild(celda);
-                }
-                tabla.appendChild(fila);
-            }
-        }
-
-        function presiono(objeto) {
-            valores = objeto.id.split('_');
-            var fila = valores[1];
-            var columna = valores[2];
-            //marcamos el comienzo de la palabra
-            objeto.style.background = "#0DA2AC";
-            //empezamos a escribir la palabra
-            solucion += objeto.innerHTML;
-            claves.push(objeto.id)
-            //comenzamos el evento para seleccionar el resto de la palabra que será en la misma fila 
-            continuar = true;
-            for (e = 1; e <= 14; e++) {
-                var capa = "cel_" + Number(fila) + "_" + e;
-                crearEvento(document.getElementById(capa), 'mouseover', muevo);
-            }
-
-        }
-
-        function muevo() {
-            if (continuar) {
-                this.style.background = '#0DA2AC'
-                solucion += this.innerHTML;
-                claves.push(this.id)
-            }
-        }
-
-        function levanto(objeto) {
-            continuar = false;
-            exito = false;
-            var valor = claves[0].split('_');
-            var fila = Number(valores[1]);
-            var columna = Number(valores[2]);
-
-            for (i = 0; i <= palabras.length; i++) {
-                if (palabras[i] == solucion) {
-                    exito = true;
-                    for (i = 0; i < palabras.length; i++) {
-                        console.log(palabras[i])
-                        document.getElementById(palabras[i]).style.display = 'none'
-                    }
-                    document.getElementById(solucion).style.display = 'block'
-                    for (j = columna; j < (columna + claves.length); j++) {
-                        document.getElementById('sopaletras').rows[fila].cells[j].style.backgroundColor = '#d3f5ed'
-                        document.getElementById('sopaletras').rows[fila].cells[j].style.color = '#07656b'
-                    }
-                }
-            }
-
-            if (!exito) {
-                for (j = columna; j < (columna + claves.length); j++) {
-                    document.getElementById('sopaletras').rows[fila].cells[j].style.backgroundColor = '#d3f5ed'
-                }
-            }
-
-            solucion = ''
-            claves = []
-        }
-
-
-
-
-        var crearEvento = function (elemento, evento, mifuncion) {
-            function w3c_crearEvento(elemento, evento, mifuncion) {
-                if (elemento) {
-                    elemento.addEventListener(evento, mifuncion, false);
-                }
-
-            }
-            function ie_crearEvento(elemento, evento, mifuncion) {
-                var fx = function () {
-                    mifuncion.call(elemento);
-                };
-                elemento.attachEvent('on' + evento, fx);
-            }
-            if (typeof window.addEventListener !== 'undefined') {
-                return w3c_crearEvento;
-            } else if (typeof window.attachEvent !== 'undefined') {
-                return ie_crearEvento;
-            }
-        }();
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
