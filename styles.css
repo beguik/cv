@@ -285,16 +285,10 @@ li {
 /* Estilos para el footer */
 
 #container-contact{
-  display:flex;
   width: 40%;
   margin:auto;
-  background-color: #EDECED
-}
-#imgcontact{
-  width: 22%;
-}
-#piecontact{
-  padding-left:5% ;
+  background-color: #EDECED;
+  text-align: center;
 }
 footer {
   background-color: #EDECED;
