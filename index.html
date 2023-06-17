@@ -56,7 +56,6 @@
           <p class="subpar">Las listas son un elemento importante en la organización del tiempo.</p>
         </div>
       </div>
-
       <div id="pswd" class="project1">
         <div class="tarjet">
           <h3>Generador Contraseñas</h3>
@@ -118,6 +117,44 @@
           <div class="button-volver">
             <button id="button-pswd-volver">Cerrar</button>
           </div>
+        </div>
+      </div>
+
+      <div id="app-cv" class="apps">
+        <div class="container-pdw">
+          <h1>Generador de Curriculum</h1>
+          <form id="resume-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" required>
+            <label for="experience">Experiencia Laboral:</label>
+            <textarea id="experience" rows="4" required></textarea>
+            <label for="education">Educación:</label>
+            <textarea id="education" rows="4" required></textarea>
+            <label for="skills">Habilidades:</label>
+            <textarea id="skills" rows="4" required></textarea>
+            <button type="submit">Generar Curriculum</button>
+          </form>
+          <hr />
+          <h2>Tu Curriculum Generado</h2>
+          <div id="generated-resume" class="hidden">
+            <div id="name-section"></div>
+            <div id="contact-section"></div>
+            <div id="contact-phone-section"></div>
+            <hr />
+            <p class="label_cv">Experiencia Laboral:</p>
+            <div id="experience-section"></div>
+            <p class="label_cv">Educación:</p>
+            <div id="education-section"></div>
+            <p class="label_cv">Habilidades:</p>
+            <div id="skills-section"></div>
+          </div>
+        </div>
+        <div class="button-volver">
+          <button id="button-cv-volver">Cerrar</button>
         </div>
       </div>
     </section>
@@ -254,7 +291,7 @@
     <section class="ancla" id="contact">
       <h2 class=" underline center">Contacto</h2>
       <div id="container-contact">
-        <img src="img/contacto.jpg" height="150px">
+        <img id="imgContact" src="img/contacto.jpg">
       </div>
     </section>
 
