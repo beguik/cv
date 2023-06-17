@@ -1,74 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Generador de Currículum</title>
+  <title>Generador de Curriculum</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-  <h1>Generador de Currículum</h1>
+  <h1>Generador de Curriculum</h1>
 
-  <div class="container">
-    <h2>Datos Personales</h2>
-    <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
-    </div>
-    <div class="form-group">
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-    </div>
+  <form id="resume-form">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" required>
 
-    <h2>Experiencia Laboral</h2>
-    <div class="experiencia-container">
-      <div class="form-group">
-        <label for="empresa">Empresa:</label>
-        <input type="text" id="empresa">
-      </div>
-      <div class="form-group">
-        <label for="puesto">Puesto:</label>
-        <input type="text" id="puesto">
-      </div>
-      <div class="form-group">
-        <label for="periodo">Periodo:</label>
-        <input type="text" id="periodo">
-      </div>
-    </div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
 
-    <button id="agregar-experiencia-btn">Agregar Experiencia</button>
+    <label for="phone">Teléfono:</label>
+    <input type="tel" id="phone" required>
 
-    <h2>Educación</h2>
-    <div class="educacion-container">
-      <div class="form-group">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo">
-      </div>
-      <div class="form-group">
-        <label for="institucion">Institución:</label>
-        <input type="text" id="institucion">
-      </div>
-      <div class="form-group">
-        <label for="anio">Año:</label>
-        <input type="text" id="anio">
-      </div>
-    </div>
+    <label for="experience">Experiencia Laboral:</label>
+    <textarea id="experience" rows="4" required></textarea>
 
-    <button id="agregar-educacion-btn">Agregar Educación</button>
+    <label for="education">Educación:</label>
+    <textarea id="education" rows="4" required></textarea>
 
-    <button id="generar-cv-btn">Generar Currículum</button>
+    <label for="skills">Habilidades:</label>
+    <textarea id="skills" rows="4" required></textarea>
 
-    <div id="cv-container" class="hidden">
-      <h2>Curriculum Vitae</h2>
-      <div id="cv-datos"></div>
-      <div id="cv-experiencia"></div>
-      <div id="cv-educacion"></div>
-    </div>
+    <button type="submit">Generar Curriculum</button>
+  </form>
+  <hr />
+  <h2>Tu Curriculum Generado</h2>
+  <div id="generated-resume" class="hidden">
+    <div id="name-section"></div>
+    <div id="contact-section"></div>
+    <div id="contact-phone-section"></div>
+    <hr/>
+    Experiencia Laboral:
+    <div id="experience-section"></div>
+    Educación:
+    <div id="education-section"></div>
+    Habilidades: 
+    <div id="skills-section"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
 
+</html>

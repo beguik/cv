@@ -14,7 +14,7 @@
 <body>
   <header>
     <nav>
-      <img class="avatar" src="img/icon3.png">
+      <img class="logo" src="img/icon3.png">
       <ul>
         <li><a href="#home">Inicio</a></li>
         <li><a href="#about">Sobre mí</a></li>
@@ -45,10 +45,10 @@
       </p>
     </div>
   </section>
-  <h2 id ="projects" class="underline center" class="ancla">Proyectos</h2>
+  <h2 id="projects" class="underline center" class="ancla">Proyectos</h2>
+  <div id="responsive">
+    <section id="projects1" class="frame">
 
-  <section id="projects1">
-    <div class="frame">
       <div id="tareas" class="project1">
         <div class="tarjet">
           <h3>Lista Tareas</h3>
@@ -65,17 +65,17 @@
         </div>
       </div>
 
-      <div class="project1">
+      <div id="cv" class="project1">
         <div class="tarjet">
-          <img src="project2.jpg" alt="Proyecto2">
           <h3>Generador Curriculum</h3>
-          <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
+          <p class="par">Genera automaticamente un CV con los datos introducidos por el usuario.</p>
+          <p class="subpar">Rellena los datos mediante un formulario y obten una vista de como se vería tu CV.</p>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="answers0">
-    <div>
+
+    </section>
+
+    <section id="answers0">
       <div id="app-tareas" class="apps">
         <h1>Lista de Tareas</h1>
         <form id="taskForm">
@@ -87,9 +87,7 @@
           <button id="button-tareas-volver">Cerrar</button>
         </div>
       </div>
-    </div>
 
-    <div>
       <div id="app-pswd" class="apps">
         <div class="container-pdw">
           <h1>Generador de Contraseñas</h1>
@@ -122,153 +120,151 @@
           </div>
         </div>
       </div>
-    </div>
-    <section id="projects2" style="display:inline">
-      <div class="frame">
-        <div id="clima" class="project2">
-          <div class="tarjet">
-            <h3>Consulta del Clima</h3>
-            <p class="par">Selecciona la ubicación y consulta el tiempo que hace actualmente.</p>
-            <p class="subpar">En este proyecto trabajamos con la api de openweathermap</p>
-          </div>
-        </div>
+    </section>
 
-        <div class="project2">
-          <div class="tarjet">
-            <img src="project2.jpg" alt="Proyecto 2">
-            <h3>Consulta Noticias</h3>
-            <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
-          </div>
+    <section id="projects2" class="frame">
+      <div id="clima" class="project2">
+        <div class="tarjet">
+          <h3>Consulta del Clima</h3>
+          <p class="par">Selecciona la ubicación y consulta el tiempo que hace actualmente.</p>
+          <p class="subpar">En este proyecto trabajamos con la api de openweathermap</p>
         </div>
+      </div>
 
-        <div class="project2">
-          <div class="tarjet">
-            <img src="project2.jpg" alt="Proyecto 2">
-            <h3>Plataforma Aprendizaje</h3>
-            <p>Descripción breve del proyecto. Puedes agregar enlaces o botones para ver más detalles.</p>
-          </div>
+      <div id="marketing" class="project2">
+        <div class="tarjet">
+          <h3>Proyecto Marketing</h3>
+          <p class="par">Caso Real. Navega por la Web y Redes sociales de un caso real.</p>
+          <p class="subpar">Observa el crecimiento que puede obtener con una revisión de sus objetivos de marketing.</p>
+        </div>
+      </div>
+
+      <div id="desarrollo" class="project2">
+        <div class="tarjet">
+          <h3>Proyectos Desarrollo.</h3>
+          <p class="par">Enlaces a proyectos desarrollados en otros lenguajes de programación. </p>
+          <p class="subpar">Se muestran aquí diferentes proyectos en Java, Php o Python entre otros. </p>
         </div>
       </div>
     </section>
 
     <section id="answers">
-      <div>
-        <div id="app-clima" class="apps">
-          <h3>Seleccione Ciudad</h3>
-          <select id="city-select">
-            <optgroup label="Andalucía">
-              <option value="Almería">Almería</option>
-              <option value="Cádiz">Cádiz</option>
-              <option value="Córdoba">Córdoba</option>
-              <option value="Granada">Granada</option>
-              <option value="Huelva">Huelva</option>
-              <option value="Jaén">Jaén</option>
-              <option value="Málaga">Málaga</option>
-              <option value="Sevilla">Sevilla</option>
-            </optgroup>
-            <optgroup label="Aragón">
-              <option value="Huesca">Huesca</option>
-              <option value="Teruel">Teruel</option>
-              <option value="Zaragoza">Zaragoza</option>
-            </optgroup>
-            <optgroup label="Asturias">
-              <option value="Asturias">Asturias</option>
-            </optgroup>
-            <optgroup label="Baleares">
-              <option value="Illes Balears">Islas Baleares</option>
-            </optgroup>
-            <optgroup label="Canarias">
-              <option value="Las Palmas">Las Palmas</option>
-              <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
-            </optgroup>
-            <optgroup label="Cantabria">
-              <option value="Cantabria">Cantabria</option>
-            </optgroup>
-            <optgroup label="Castilla-La Mancha">
-              <option value="Albacete">Albacete</option>
-              <option value="Ciudad Real">Ciudad Real</option>
-              <option value="Cuenca">Cuenca</option>
-              <option value="Guadalajara">Guadalajara</option>
-              <option value="Toledo">Toledo</option>
-            </optgroup>
-            <optgroup label="Castilla y León">
-              <option value="Ávila">Ávila</option>
-              <option value="Burgos">Burgos</option>
-              <option value="León">León</option>
-              <option value="Palencia">Palencia</option>
-              <option value="Salamanca">Salamanca</option>
-              <option value="Segovia">Segovia</option>
-              <option value="Soria">Soria</option>
-              <option value="Valladolid">Valladolid</option>
-              <option value="Zamora">Zamora</option>
-            </optgroup>
-            <optgroup label="Cataluña">
-              <option value="Barcelona">Barcelona</option>
-              <option value="Girona">Girona</option>
-              <option value="Lleida">Lleida</option>
-              <option value="Tarragona">Tarragona</option>
-            </optgroup>
-            <optgroup label="Ceuta">
-              <option value="Ceuta">Ceuta</option>
-            </optgroup>
-            <optgroup label="Comunidad de Madrid">
-              <option value="Madrid">Madrid</option>
-            </optgroup>
-            <optgroup label="Comunidad Valenciana">
-              <option value="Alicante">Alicante</option>
-              <option value="Castellón">Castellón</option>
-              <option value="Valencia">Valencia</option>
-            </optgroup>
-            <optgroup label="Extremadura">
-              <option value="Badajoz">Badajoz</option>
-              <option value="Cáceres">Cáceres</option>
-            </optgroup>
-            <optgroup label="Galicia">
-              <option value="A Coruña">A Coruña</option>
-              <option value="Lugo">Lugo</option>
-              <option value="Ourense">Ourense</option>
-              <option value="Pontevedra">Pontevedra</option>
-            </optgroup>
-            <optgroup label="La Rioja">
-              <option value="La Rioja">La Rioja</option>
-            </optgroup>
-            <optgroup label="Melilla">
-              <option value="Melilla">Melilla</option>
-            </optgroup>
-            <optgroup label="Navarra">
-              <option value="Navarra">Navarra</option>
-            </optgroup>
-            <optgroup label="País Vasco">
-              <option value="Álava">Álava</option>
-              <option value="Gipuzkoa">Guipúzcoa</option>
-              <option value="Bizkaia">Vizcaya</option>
-            </optgroup>
-            <optgroup label="Región de Murcia">
-              <option value="Murcia">Murcia</option>
-            </optgroup>
-          </select>
-          <button id="search-btn">Buscar</button>
-          <div id="clima-info"></div>
-          <div class="button-volver">
-            <button id="button-clima-volver" ">Cerrar</button>
-          </div>
+      <div id="app-clima" class="apps">
+        <h3>Seleccione Ciudad</h3>
+        <select id="city-select">
+          <optgroup label="Andalucía">
+            <option value="Almería">Almería</option>
+            <option value="Cádiz">Cádiz</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Granada">Granada</option>
+            <option value="Huelva">Huelva</option>
+            <option value="Jaén">Jaén</option>
+            <option value="Málaga">Málaga</option>
+            <option value="Sevilla">Sevilla</option>
+          </optgroup>
+          <optgroup label="Aragón">
+            <option value="Huesca">Huesca</option>
+            <option value="Teruel">Teruel</option>
+            <option value="Zaragoza">Zaragoza</option>
+          </optgroup>
+          <optgroup label="Asturias">
+            <option value="Asturias">Asturias</option>
+          </optgroup>
+          <optgroup label="Baleares">
+            <option value="Illes Balears">Islas Baleares</option>
+          </optgroup>
+          <optgroup label="Canarias">
+            <option value="Las Palmas">Las Palmas</option>
+            <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+          </optgroup>
+          <optgroup label="Cantabria">
+            <option value="Cantabria">Cantabria</option>
+          </optgroup>
+          <optgroup label="Castilla-La Mancha">
+            <option value="Albacete">Albacete</option>
+            <option value="Ciudad Real">Ciudad Real</option>
+            <option value="Cuenca">Cuenca</option>
+            <option value="Guadalajara">Guadalajara</option>
+            <option value="Toledo">Toledo</option>
+          </optgroup>
+          <optgroup label="Castilla y León">
+            <option value="Ávila">Ávila</option>
+            <option value="Burgos">Burgos</option>
+            <option value="León">León</option>
+            <option value="Palencia">Palencia</option>
+            <option value="Salamanca">Salamanca</option>
+            <option value="Segovia">Segovia</option>
+            <option value="Soria">Soria</option>
+            <option value="Valladolid">Valladolid</option>
+            <option value="Zamora">Zamora</option>
+          </optgroup>
+          <optgroup label="Cataluña">
+            <option value="Barcelona">Barcelona</option>
+            <option value="Girona">Girona</option>
+            <option value="Lleida">Lleida</option>
+            <option value="Tarragona">Tarragona</option>
+          </optgroup>
+          <optgroup label="Ceuta">
+            <option value="Ceuta">Ceuta</option>
+          </optgroup>
+          <optgroup label="Comunidad de Madrid">
+            <option value="Madrid">Madrid</option>
+          </optgroup>
+          <optgroup label="Comunidad Valenciana">
+            <option value="Alicante">Alicante</option>
+            <option value="Castellón">Castellón</option>
+            <option value="Valencia">Valencia</option>
+          </optgroup>
+          <optgroup label="Extremadura">
+            <option value="Badajoz">Badajoz</option>
+            <option value="Cáceres">Cáceres</option>
+          </optgroup>
+          <optgroup label="Galicia">
+            <option value="A Coruña">A Coruña</option>
+            <option value="Lugo">Lugo</option>
+            <option value="Ourense">Ourense</option>
+            <option value="Pontevedra">Pontevedra</option>
+          </optgroup>
+          <optgroup label="La Rioja">
+            <option value="La Rioja">La Rioja</option>
+          </optgroup>
+          <optgroup label="Melilla">
+            <option value="Melilla">Melilla</option>
+          </optgroup>
+          <optgroup label="Navarra">
+            <option value="Navarra">Navarra</option>
+          </optgroup>
+          <optgroup label="País Vasco">
+            <option value="Álava">Álava</option>
+            <option value="Gipuzkoa">Guipúzcoa</option>
+            <option value="Bizkaia">Vizcaya</option>
+          </optgroup>
+          <optgroup label="Región de Murcia">
+            <option value="Murcia">Murcia</option>
+          </optgroup>
+        </select>
+        <button id="search-btn">Buscar</button>
+        <div id="clima-info"></div>
+        <div class="button-volver">
+          <button id="button-clima-volver">Cerrar</button>
         </div>
       </div>
-
     </section>
 
-    <h2 class="underline center">Contacto</h2>
     <section class="ancla" id="contact">
-              <div id="container-contact">
-                  <img src="img/contacto.jpg" height="150px">
-              </div>
+      <h2 class=" underline center">Contacto</h2>
+      <div id="container-contact">
+        <img src="img/contacto.jpg" height="150px">
+      </div>
     </section>
 
-    <footer>
-      <p>&copy; 2023 Belén Guijarro</p>
-    </footer>
+  </div>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2023 Belén Guijarro</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

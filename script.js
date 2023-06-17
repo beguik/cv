@@ -1,3 +1,6 @@
+/*menu responsive*/
+
+
 
 /*ajustar las anclas por el menu de nav fijado*/
 document.querySelectorAll('nav a').forEach(anchor => {

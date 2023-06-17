@@ -1,21 +1,71 @@
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 20px;
 }
 
-.form-group {
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 5px;
   margin-bottom: 10px;
 }
 
-.experiencia-container,
-.educacion-container {
-  margin-bottom: 20px;
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
+
+#generated-resume {
+  margin: auto;
+  margin-top: 30px;
+  width: 70%;
+  padding: 2%;
+  border: 1em solid black;
+  display: none;
 }
 
 .hidden {
   display: none;
 }
 
-  
-  
+#name-section {
+  font-size: xx-large;
+  text-align: center;
+}
+
+#contact-section{
+  margin: auto;
+  text-align: right;
+}
+#contact-phone-section{
+  margin: auto;
+  text-align: right;
+}
+#experience-section{
+  margin: auto;
+  padding: 0% 2%;
+}
+#education-section{
+  margin: auto;
+  padding: 0% 2%;
+}
+#skills-section{
+  margin: auto;
+  padding: 0% 2%;
+}
+
+
