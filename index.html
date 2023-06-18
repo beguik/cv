@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Belén Guijarro - Portfolio</title>
-  <link rel="icon" type="image/png" href="img/icon2.png">
+  <link rel="icon" type="image/png" href="img/icon2.png" alt="Logo">
   <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="styles.css">
@@ -14,13 +14,13 @@
 <body>
   <header>
     <nav>
-      <img class="logo" src="img/icon3.png">
+      <img class="logo" src="img/icon3.png" alt="logo">
       <ul>
         <li><a href="#home">Inicio</a></li>
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#projects">Proyectos</a></li>
         <li><a href="#contact">Contacto</a></li>
-        <li><img class="avatar" src="img/foto blanco y negro.jpg"></li>
+        <li><img class="avatar" src="img/foto blanco y negro.jpg" alt="Foto personal en blanco y negro"></li>
       </ul>
     </nav>
   </header>
@@ -286,14 +286,122 @@
           <button id="button-clima-volver">Cerrar</button>
         </div>
       </div>
-    </section>
 
-    <section class="ancla" id="contact">
-      <h2 class=" underline center">Contacto</h2>
-      <div id="container-contact">
-        <img id="imgContact" src="img/contacto.jpg">
+      <div id="app-marketing" class="apps">
+        <h3>Proyectos Marketing</h3>
+        <hr />
+        <h2>Clau Complementos</h2>
+        <div class="container-marketing">
+          <p class="descripcion">"Informatización y Gestión de Redes Sociales en Clau Complementos:
+
+            Como parte del proyecto de Clau Complementos, tuve el privilegio de encargarme de la informatización
+            integral de la tienda, así como de la estrategia y gestión de las redes sociales. Mi objetivo principal fue
+            establecer una presencia en línea efectiva y atractiva, con el fin de ampliar el alcance de la tienda y
+            llegar a un público más amplio.<br /><br />
+
+            Desarrollé y configuré una plataforma de comercio electrónico utilizando
+            WordPress, e integré la tienda con la plataforma Meta, donde creé perfiles estratégicos, centrándome
+            principalmente en Facebook debido al publico objetivo que por edad se encontrama más posicionado en esta
+            red. <br /><br />
+
+            Implementé una estrategia de contenido coherente y atractivo, que incluía una revisión del SEO, junto con
+            publicaciones regulares,
+            promociones especiales y la interacción cercana con los seguidores. Esto nos permitió aumentar
+            significativamente la visibilidad de Clau Complementos.<br /><br />
+
+            Este proyecto fue una oportunidad enriquecedora para aplicar mis habilidades técnicas y creativas en el
+            ámbito del comercio electrónico y el marketing digital. Además, me permitió desarrollar una sólida
+            comprensión de la importancia de la presencia en línea y la gestión estratégica de las redes sociales para
+            el crecimiento y éxito de un negocio.<br /><br />
+
+            Estoy orgullosa de haber contribuido al éxito de Clau Complementos a través de la informatización y la
+            gestión de redes sociales, y espero seguir aplicando mis conocimientos y habilidades en futuros proyectos
+            similares."</p>
+          <div class="project-details">
+            <img class="img-marketing" src="img/claucomplementos.jpg"
+              alt="Captura de pantalla de la web de Clau Complementos">
+            <div class="project-actions">
+              <button class="button-volver "><a href="https://www.claucomplementos.com" target="_blank"
+                  class="enlace">Ver sitio web</a></button>
+            </div>
+            <div class="button-volver">
+              <button id="button-marketing-volver">Cerrar</button>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </section>
+
+      <div id="app-desarrollo" class="apps">
+        <h3>Proyectos de Desarrollo</h3>
+
+
+        <div id="proyectos">
+          <div class="proyecto">
+            <div class="descripcion">
+              <h2>EncuentraPiso</h2>
+              <p><u>Portal Inmobiliario:</u> Este proyecto fue desarrollado como parte de mi <b>Trabajo de Fin de
+                  Grado</b> en el
+                ciclo de Desarrollo de Aplicaciones Web. Utilicé Python con el framework de Django para su
+                implementación. Aunque Django no era parte del plan de estudios, decidí adentrarme en este lenguaje
+                debido a que las prácticas se iban a realizar en Django, y preferí familiarizarme con él antes de
+                comenzar las prácticas.<br /><br />
+
+                El proyecto consiste en un portal inmobiliario que ofrece dos perfiles de usuarios: el perfil cliente
+                y el perfil agente inmobiliario. El perfil cliente tiene acceso a la plataforma, donde puede explorar
+                los pisos disponibles y realizar reservas. Por otro lado, el perfil agente inmobiliario se encarga de
+                gestionar los inmuebles y las citas relacionadas.<br /><br />
+
+                Esta experiencia me brindó la oportunidad de aplicar mis conocimientos en desarrollo web y adquirir
+                habilidades específicas en el uso de Python y Django. Además, pude poner en práctica la gestión de
+                usuarios y la implementación de funcionalidades relevantes para el sector inmobiliario.<br /><br />
+
+                Estoy orgulloso/a de haber realizado este proyecto como parte de mi formación académica, ya que me
+                permitió ampliar mis habilidades técnicas y demostrar mi capacidad para enfrentar desafíos en el
+                desarrollo de aplicaciones web.</p>
+            </div>
+            <div class="enlace">
+              <div class="project-actions">
+                <button class="button-volver ">
+                  <a href="https://github.com/beguik/encuentrapiso" target="_blank" class="enlace">Ver
+                    proyecto</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="proyecto">
+            <div class="descripcion">
+              <h2>Concesionario</h2>
+              <p>Este proyecto fue enviado a la empresa donde realice las prácticas TangramBPM, para que me aceptaran
+                realizar las prácticas alli.
+                Se trata de un proyecto realizado en Django, y en este caso es un concesionario de coches donde tenemos
+                marcas, modelos y vehículos y se deben de gestionar las entradas y salidas de vehiculos.
+                listar por modelos por marcas, modificar caracteristicas....
+              </p>
+            </div>
+            <div class="enlace">
+              <div class="project-actions">
+                <button class="button-volver ">
+                  <a href="https://github.com/beguik/Concesionario" target="_blank" class="enlace">Ver proyecto</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-volver">
+          <button id="button-desarrollo-volver">Cerrar</button>
+        </div>
+      </div>
+  </div>
+
+
+  </section>
+
+  <section class="ancla" id="contact">
+    <h2 class=" underline center">Contacto</h2>
+    <div id="container-contact">
+      <img id="imgContact" src="img/contacto.jpg" alt="Datos de contacto">
+    </div>
+  </section>
 
   </div>
 

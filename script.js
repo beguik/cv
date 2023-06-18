@@ -1,6 +1,6 @@
 /*variables generarles que hacen referencia a cada proyecto*/
-var projects1=document.getElementById("projects1");
-var projects2=document.getElementById("projects2");
+var projects1 = document.getElementById("projects1");
+var projects2 = document.getElementById("projects2");
 
 /*ajustar las anclas por el menu de nav fijado*/
 document.querySelectorAll('nav a').forEach(anchor => {
@@ -31,7 +31,7 @@ tareas.addEventListener('click', () => {
     projects1.style.display = "none";
     projects2.style.display = "none";
 
-  } 
+  }
   app_tareas.style.display = "block"
 })
 
@@ -39,9 +39,9 @@ tareas.addEventListener('click', () => {
 button_tareas.addEventListener('click', () => {
   app_tareas.style.display = "none";
   if (window.innerWidth < 1000) {
-    projects1.style.display="block"
-    projects2.style.display="block"
-  } 
+    projects1.style.display = "block"
+    projects2.style.display = "block"
+  }
 })
 /*funcionamiento tareas*/
 let tasks = [];
@@ -116,8 +116,8 @@ taskForm.addEventListener('submit', function (event) {
   event.preventDefault();
   var taskDescription = taskInput.value.trim();
   if (taskDescription !== '') {
-    const taskId = tasks.length + 1;
-    const task = {
+    var taskId = tasks.length + 1;
+    var task = {
       id: taskId,
       description: taskDescription,
     };
@@ -134,22 +134,22 @@ var app_pswd = document.getElementById('app-pswd');
 var button_pswd = document.getElementById('button-pswd-volver');
 
 
-/*mostrar proyecto tareas*/
+/*mostrar proyecto contraseñas*/
 pswd.addEventListener('click', () => {
   if (window.innerWidth < 1000) {
     projects1.style.display = "none";
     projects2.style.display = "none";
-  } 
+  }
   app_pswd.style.display = "block"
 })
 
-/*ocular div tareas*/
+/*ocular div contraseñas*/
 button_pswd.addEventListener('click', () => {
   app_pswd.style.display = "none";
   if (window.innerWidth < 1000) {
-    projects1.style.display="block"
-    projects2.style.display="block"
-  } 
+    projects1.style.display = "block"
+    projects2.style.display = "block"
+  }
 })
 
 /*Funciones generador contraseña*/
@@ -195,25 +195,24 @@ var cv = document.getElementById('cv');
 var app_cv = document.getElementById('app-cv');
 var button_cv = document.getElementById('button-cv-volver');
 
-
-/*mostrar proyecto tareas*/
+/*mostrar proyecto cv*/
 cv.addEventListener('click', () => {
   if (window.innerWidth < 1000) {
     projects1.style.display = "none";
     projects2.style.display = "none";
-  } 
+  }
   app_cv.style.display = "block"
 })
 
-/*ocular div tareas*/
+/*ocular div cv*/
 button_cv.addEventListener('click', () => {
   app_cv.style.display = "none";
   if (window.innerWidth < 1000) {
-    projects1.style.display="block"
-    projects2.style.display="block"
-  } 
+    projects1.style.display = "block"
+    projects2.style.display = "block"
+  }
 })
-document.getElementById("resume-form").addEventListener("submit", function(event) {
+document.getElementById("resume-form").addEventListener("submit", function (event) {
   event.preventDefault();
   generateResume();
 });
@@ -231,36 +230,38 @@ function generateResume() {
   document.getElementById("contact-phone-section").textContent = phone;
   document.getElementById("experience-section").textContent = experience;
   document.getElementById("education-section").textContent = education;
-  document.getElementById("skills-section").textContent =skills;
+  document.getElementById("skills-section").textContent = skills;
 
   document.getElementById("generated-resume").style.display = "block";
 }
 
-
-
-
-
-
-
-
-
 /*------------------------------------app-clima-----------------------------------------*/
-const clima = document.getElementById('clima');
-const app_clima = document.getElementById('app-clima');
-const button_clima = document.getElementById('button-clima-volver');
-const searchButton = document.getElementById('search-btn');
-const city = document.getElementById('city-select');
-const climaInfo = document.getElementById('clima-info');
-const apiKey = '06d16ba065d8e818a62f6b48ae807d1c';
+var clima = document.getElementById('clima');
+var app_clima = document.getElementById('app-clima');
+var button_clima = document.getElementById('button-clima-volver');
+var searchButton = document.getElementById('search-btn');
+var city = document.getElementById('city-select');
+var climaInfo = document.getElementById('clima-info');
+var apiKey = '06d16ba065d8e818a62f6b48ae807d1c';
 
-/*mostrar proyecto*/
+/*mostrar proyecto clima*/
 clima.addEventListener('click', () => {
+  if (window.innerWidth < 1000) {
+    projects1.style.display = "none";
+    projects2.style.display = "none";
+  }
   app_clima.style.display = "block"
 })
-/*ocular div*/
+
+/*ocular div clima*/
 button_clima.addEventListener('click', () => {
   app_clima.style.display = "none";
+  if (window.innerWidth < 1000) {
+    projects1.style.display = "block"
+    projects2.style.display = "block"
+  }
 })
+
 /*llamada api tiempo*/
 searchButton.addEventListener('click', () => {
   if (city) {
@@ -270,16 +271,16 @@ searchButton.addEventListener('click', () => {
 
 /*función consulta tiempo*/
 function getWeatherData(location) {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location},ES&appid=${apiKey}&lang=ES`;
+  var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location},ES&appid=${apiKey}&lang=ES`;
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      const weatherDescription = data.weather[0].description;
-      const temperature = Math.round(data.main.temp - 273.15);
-      const humidity = data.main.humidity;
+      var weatherDescription = data.weather[0].description;
+      var temperature = Math.round(data.main.temp - 273.15);
+      var humidity = data.main.humidity;
 
-      const weatherData = `Descripción: ${weatherDescription}<br>
+      var weatherData = `Descripción: ${weatherDescription}<br>
                              Temperatura: ${temperature}°C<br>
                              Humedad: ${humidity}%`;
 
@@ -291,4 +292,49 @@ function getWeatherData(location) {
     });
 }
 
+/*----------------------------app-marketing---------------------- */
+var marketing = document.getElementById('marketing');
+var app_marketing = document.getElementById('app-marketing');
+var button_marketing = document.getElementById('button-marketing-volver');
 
+/*mostrar proyecto marketing*/
+marketing.addEventListener('click', () => {
+  if (window.innerWidth < 1000) {
+    projects1.style.display = "none";
+    projects2.style.display = "none";
+  }
+  app_marketing.style.display = "block"
+})
+
+/*ocular div marketing*/
+button_marketing.addEventListener('click', () => {
+  app_marketing.style.display = "none";
+  if (window.innerWidth < 1000) {
+    projects1.style.display = "block"
+    projects2.style.display = "block"
+  }
+})
+
+
+/*-------------------------app-desarrollo------------------------------*/
+var desarrollo = document.getElementById('desarrollo');
+var app_desarrollo = document.getElementById('app-desarrollo');
+var button_desarrollo = document.getElementById('button-desarrollo-volver');
+
+/*mostrar proyecto marketing*/
+desarrollo.addEventListener('click', () => {
+  if (window.innerWidth < 1000) {
+    projects1.style.display = "none";
+    projects2.style.display = "none";
+  }
+  app_desarrollo.style.display = "block"
+})
+
+/*ocular div marketing*/
+button_desarrollo.addEventListener('click', () => {
+  app_desarrollo.style.display = "none";
+  if (window.innerWidth < 1000) {
+    projects1.style.display = "block"
+    projects2.style.display = "block"
+  }
+})

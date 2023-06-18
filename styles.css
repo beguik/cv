@@ -203,6 +203,7 @@ button {
 }
 
 .button-volver {
+  margin-top: 6px;
   text-align: right;
 }
 
@@ -250,7 +251,15 @@ li {
   margin-bottom: 10px;
 }
 
+#taskInput,
+#taskList {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
 .task {
+  border-bottom: 2px solid #333;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -258,13 +267,13 @@ li {
 }
 
 .task-text {
-  width: 80%;
+  max-width: 60%;
   overflow-wrap: break-word;
 }
 
 .task-actions {
-  width: 20%;
-  display: flex;
+  max-width: 40%;
+  display: block;
   justify-content: space-between;
 }
 
@@ -286,8 +295,16 @@ li {
   margin-top: 10px;
 }
 
+#length {
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 18px;
+}
+
 #password {
-  width: 300px;
+  max-width: 90%;
+  box-sizing: border-box;
   padding: 10px;
   font-size: 18px;
 }
@@ -297,6 +314,7 @@ li {
   padding: 10px 20px;
   font-size: 16px;
 }
+
 /*cv*/
 form {
   margin-bottom: 20px;
@@ -306,16 +324,19 @@ label {
   display: block;
   margin-bottom: 5px;
 }
-.label_cv{
+
+.label_cv {
   text-align: left;
   text-decoration: underline #40584c;
 }
+
 input,
 textarea {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
 }
+
 #generated-resume {
   margin: auto;
   margin-top: 30px;
@@ -325,36 +346,52 @@ textarea {
   background-color: #EDECED;
   display: none;
 }
+
 #name-section {
   font-size: xx-large;
   text-align: center;
 }
 
-#contact-section{
+#contact-section {
   margin: auto;
   text-align: right;
 }
-#contact-phone-section{
+
+#contact-phone-section {
   margin: auto;
   text-align: right;
 }
-#experience-section{
-  margin: auto;
-  text-align: left;
-  padding: 0% 2%;
-}
-#education-section{
-  margin: auto;
-  text-align: left;
-  padding: 0% 2%;
-}
-#skills-section{
+
+#experience-section {
   margin: auto;
   text-align: left;
   padding: 0% 2%;
 }
 
+#education-section {
+  margin: auto;
+  text-align: left;
+  padding: 0% 2%;
+}
 
+#skills-section {
+  margin: auto;
+  text-align: left;
+  padding: 0% 2%;
+}
+
+/*maketing*/
+.img-marketing {
+  max-width: 90%;
+}
+.enlace{
+  text-decoration: none;
+  color:#EDECED
+}
+
+.descripcion{
+  text-align: justify;
+}
 
 /* Estilos para el footer */
 
@@ -367,8 +404,9 @@ footer {
   background-color: #EDECED;
   text-align: center;
 }
+
 #imgContact {
-  width:30%;
+  width: 30%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -393,13 +431,15 @@ footer {
   nav ul {
     display: none;
   }
+
   #imgContact {
-    width:80%;
+    width: 80%;
   }
-  .apps{
-width: 80%;
-margin:auto;
+
+  .apps {
+    width: 80%;
+    margin: auto;
 
   }
- 
+
 }
