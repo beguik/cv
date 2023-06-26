@@ -159,7 +159,9 @@ nav ul li a {
   box-shadow: inset 3px 3px 3px #82b099, inset -2px -2px 3px #40584c, 2px 2px 10px #40584c;
   text-shadow: -1px -1px rgba(0, 0, 0, .2);
   background-color: #597B6A;
-
+}
+.cv{
+  padding: 1%;
 }
 
 .par {
